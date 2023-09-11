@@ -1,0 +1,51 @@
+/* Navbar Styles */
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins&display=swap');
+
+.navbar {
+    background-color: rgb(3 7 17);
+    height: 64px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px;
+    margin: 0 60px;
+  }
+  
+  .navbar-brand a {
+    font-size: 34px;
+    font-family: poppins;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 60px;
+  }
+  
+  .navbar-links li {
+    /* font-size: 18px; */
+
+  }
+  
+  .navbar-links a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fcfafa;
+    font-family: poppins;
+   
+  }
+  
+  .navbar-links a:hover {
+    color: rgb(115, 173, 184);
+    border-bottom: 2px solid #fff;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+  }
+  

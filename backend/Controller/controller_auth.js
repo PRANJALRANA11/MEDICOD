@@ -25,7 +25,7 @@ exports.signup=async(req,res)=>{
   				console.log(con);
   				res.status(200).json({ message: "New user created." });
 			}
-
+			
     }
 	catch(error){
     	res.status(400).json(error.message);
