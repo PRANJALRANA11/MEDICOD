@@ -1,0 +1,18 @@
+.home_compo_header{
+    background-color: rgb(3 7 17);
+    height: 100vh;
+}
+.home_compo_header  .header_div{
+    display: flex;
+    
+}
+.home_compo_header  .header_div  .heading_div{
+    margin-top: 5rem;
+    margin-left: 6rem;
+}
+.home_compo_header  .header_div  .heading_div  div{
+
+}
+.home_compo_header  .header_div  .heading_div  div span{
+    color: white;
+}

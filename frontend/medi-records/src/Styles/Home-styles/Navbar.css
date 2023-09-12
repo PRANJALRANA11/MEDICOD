@@ -4,6 +4,7 @@
 .navbar {
     background-color: rgb(3 7 17);
     height: 64px;
+    
   }
   
   .container {
@@ -12,6 +13,7 @@
     align-items: center;
     padding: 0px 32px;
     margin: 0 60px;
+    position: fixed;
   }
   
   .navbar-brand a {
@@ -20,6 +22,7 @@
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
+    margin-right: 55rem;
   }
   
   .navbar-links {
