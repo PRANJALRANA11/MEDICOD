@@ -9,14 +9,22 @@ const Navbar = () => {
           <a href="/">MEDICOD</a>
         </div>
         <ul className="navbar-links">
-          <li><a href="/appointments">About</a></li>
-          <li><a href="/appointments">Contact</a></li>
-          <li><a href="/telemedicine">Records</a></li>
-          <li><a href='/' style={{
+          <li>
+            <a href="/appointments">About</a>
+          </li>
+          <li>
+            <a href="/appointments">Contact</a>
+          </li>
+          <li>
+            <a href="/telemedicine">Records</a>
+          </li>
+          <li>
+            <a href='/' style={{
             padding: "8px 16px",
             border: "1px solid #1d283a",
             borderRadius: "10px",
-          }}>Signup</a></li>
+                        }}>Signup</a>
+          </li>
         </ul>
       </div>
     </nav>

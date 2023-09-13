@@ -13,39 +13,37 @@ export default function Header() {
                     padding:"4px 12px",
                     width:"360px",
                     fontFamily:"'Poppins', sans-serif",
-                }}>
+                            }}>
                     <span>
                         All Your Medical Records At One Place
                     </span>
                 </div>
-                <div style={
-                    {
+                <div style={{
                         width:"38rem",
-                    }
-                }>
+                            }}>
                     <h1 style={{
                         color:"white",
                         fontSize:"3rem",
                         fontFamily:"'Poppins",
                         color:"#e1e7ef",
-                    }}>
-                       Effortless Medical Record Management Online
+                                }}>
+                        Effortless Medical Record Management Online
                     </h1>
                 </div>
                 <div
                 style={{
                     width:"47rem",
-                }}>
+                       }}>
                     <span
                     style={{
                         color:"#7f8ea3",
                         fontSize:"1.2rem",
                         marginLeft:"-15px",
-                    }}>
-                    Welcome to MEDICOD, 
-                    where your health information is our top priority.
-                    We offer a secure and user-friendly platform to store 
-                    and manage your medical records online.
+                            }}>
+                        Welcome to MEDICOD, 
+                        where your health information is our top priority.
+                        We offer a secure and user-friendly platform to store 
+                        and manage your medical records online.
                     </span>
                 </div>
                 <div
@@ -58,11 +56,11 @@ export default function Header() {
                     fontFamily:"'Poppins', sans-serif",
                     marginTop:"30px",
                     marginLeft: "17px",
-                }}>
+                        }}>
                     <a href='/' style={{
                         textDecoration:"none",
                         color:"#000",
-                    }}>
+                                        }}>
                         Get Started
                     </a>
                 </div>
@@ -70,18 +68,18 @@ export default function Header() {
                     display:"flex",
                     marginTop:"50px",
                     marginLeft: "17px",
-                }}>
+                            }}>
                     <div style={{
                         display:"flex",
                         marginRight:"30px",
-                    }}>
+                                }}>
                         <div style={{
                             backgroundColor:"#fff",
                             width:"30px",
                             height:"30px",
                             padding:"6px",
                             borderRadius:"5px",
-                        }}>
+                                    }}>
                             <i class="fa-regular fa-user fa-xl" ></i>
                         </div>
                             <span style={{
@@ -89,19 +87,21 @@ export default function Header() {
                                 marginLeft:"10px",
                                 color:"#e1e7ef",
                                 fontFamily:"'Poppins', sans-serif",
-                            }}>Over 1000+ clients</span>
+                                        }}>
+                                Over 1000+ clients
+                            </span>
                     </div>
                     <div style={{
                         display:"flex",
                         marginRight:"30px",
-                    }}>
+                                }}>
                         <div style={{
                             backgroundColor:"#fff",
                             width:"30px",
                             height:"30px",
                             padding:"6px",
                             borderRadius:"5px",
-                        }}>
+                                    }}>
                             <i class="fa-regular fa-circle-check fa-xl"></i>
                         </div>    
                             <span style={{
@@ -109,18 +109,20 @@ export default function Header() {
                                 marginLeft:"10px",
                                 color:"#e1e7ef",
                                 fontFamily:"'Poppins', sans-serif",
-                            }}>Verified Trusted</span>
+                                        }}>
+                                Verified Trusted
+                            </span>
                     </div>
                     <div style={{
                         display:"flex",
-                    }}>
+                                }}>
                         <div style={{
                             backgroundColor:"#fff",
                             width:"30px",
                             height:"30px",
                             padding:"6px",
                             borderRadius:"5px",
-                        }}>
+                                    }}>
                             <i class="fa-solid fa-shield fa-xl"></i>
                         </div>    
                             <span style={{
@@ -128,18 +130,21 @@ export default function Header() {
                                 marginLeft:"10px",
                                 color:"#e1e7ef",
                                 fontFamily:"'Poppins', sans-serif",
-                            }}>Secure & Safe</span>
+                                        }}>
+                                Secure & Safe
+                            </span>
                     </div>
                 </div>
             </div>
             <div className='img_div'>
-                <img src="/assets/doctor.png" alt='photo'
+                <img src="/assets/doctor.png" alt='doctor_image'
                 style={{
                     width:"60%",
-                    height:"100%",
+                    height:"auto",
                     marginLeft:"200px",
-                    
-                }}></img>
+                    marginTop:"70px",
+                        }}>
+                </img>
             </div>
         </div>
      </header> 

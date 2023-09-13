@@ -1,19 +1,21 @@
 /* Navbar Styles */
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins&display=swap');
 
+ /* Navbar Styles */
 .navbar {
     background-color: rgb(3 7 17);
     height: 64px;
-    
+    position: fixed;
+    z-index: 1000;
   }
   
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 32px;
+    padding: 10px 32px;
     margin: 0 60px;
-    position: fixed;
+    
   }
   
   .navbar-brand a {
@@ -22,7 +24,7 @@
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    margin-right: 55rem;
+    margin-right: 44rem;
   }
   
   .navbar-links {

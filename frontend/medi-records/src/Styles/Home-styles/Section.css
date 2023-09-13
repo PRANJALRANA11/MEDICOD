@@ -1,0 +1,103 @@
+/* Section Styles */
+.Section_div{
+    background-color: rgb(3 7 17);
+    padding-top: 100px;
+}
+
+/* Section Box Styles */
+.Section_div_1{
+    display: flex;
+    width: 1265px;
+    height:540px;
+    margin-left:7rem ;
+    background-image: linear-gradient(to right, rgb(227 235 240), rgb(172 223 249));
+    border-radius: 20px;
+    padding: 40px;
+    
+}
+
+/* Inner Half Box */
+.Section_div_1_1{
+ width: 60%;
+ text-align: left;
+ margin-top: 12rem;
+    
+}
+.Section_div_1_1_1{
+    font-family: poppins;
+    color: #7f8ea3;
+    font-size: 1.2rem;
+
+}
+.Section_div_1_1_2{
+    font-family: poppins;
+    font-size: 1.8rem;
+   
+    font-weight: bold;
+}
+.Section_div_1_1_3{
+    font-family: poppins;
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 75%;
+}
+.Section_div_1_1_4{
+    background-color: aliceblue;
+    width: 135px;
+    height: 30px;
+    border-radius: 10px;
+    padding:  4px;
+    text-align: center;
+    margin-top:2rem ;
+}
+.Section_div_1_1_4 a{
+    text-decoration: none;
+    color: black;
+    font: 14px poppins;
+}
+
+/* Inner Half Box */
+.Section_div_1_2{
+    text-align: left;
+    width: 40%;
+}
+.Section_div_1_2_1{
+    font-family: poppins;
+    font-size: 100px;
+    font-weight: bold;
+}
+.Section_div_1_2_2{
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.Section_div_1_2_3{
+    font-family: poppins;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+/* Bottom section */
+.Section_div_2_1{
+    font:30px poppins ;
+    color: #7f8ea3;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 7rem;
+}
+.Section_div_2_2{
+    color: #ffff;
+    font:38px poppins;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+.Section_div_2_3{
+    color:#e1e7ef;
+    font:20px poppins;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
