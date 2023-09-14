@@ -1,0 +1,55 @@
+.Pricing_div{
+    background-color: #030711;
+    
+}
+.Pricing_div1{
+    
+}
+.Pricing_div1_1 h1{
+    font-size: 4.5rem;
+    font-family: poppins;
+    color:#e1e7ef;
+    margin-top: 0;
+    padding-top: 10rem;
+    margin-bottom: 1rem;
+}
+
+.Pricing_div1_2{
+    color:rgb(55 65 81);
+    font:18px poppins;
+}
+.Pricing_div2{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;  
+    margin-left: 2rem;
+}
+.Pricing_div2_1{
+    border: 1px solid rgb(55 65 81);
+    margin-right: 3rem;
+    height: 580px;
+    width:450px;
+    padding-left: 1rem;
+    border-radius: 10px;
+}
+.Pricing_div2_1_1{
+    color:#e1e7ef;
+    font:42px poppins;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.Pricing_div2_1_2{
+    color:#e1e7ef;
+    font:22px poppins;
+    text-align: left;
+}
+.Pricing_div2_1_4{
+    margin-top: 3rem;
+}
+.Pricing_div2_1_3{
+    color: #e1e7ef;
+    font:18px poppins;
+    text-align: left;
+    margin-top: 5px;
+}
