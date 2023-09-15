@@ -1,0 +1,57 @@
+.Contact_div{
+    background-color: rgb(3 7 17);
+    padding-top: 5rem;
+}
+.Upper_Contact_Box{
+    width:1100px;
+    height:100px;
+    background-color: #3b82f6;
+    margin: auto;
+    border-radius: 25px;
+    padding: 96px 96px 80px;
+    position: relative;
+    top:120px;
+    
+}
+.heading{
+    font:56px poppins;
+    font-weight: bold;
+    color: #0f172a;
+}
+.Lower_Contact_Box{
+    background-color: #0f172a;
+   
+
+}
+.Logo{
+    font:2rem poppins;  
+    color: #FFFF;
+    font-weight: bold;
+    padding-top: 10rem;
+}
+.description{
+    font:1rem poppins;  
+    color: #FFFF;
+    margin-top: 3rem;
+}
+.social-links{
+    margin-top: 2rem;
+}
+.horizontal-rule{
+    width:80%;
+    border:1px solid #ffff;
+    height: 0;
+    margin-top: 2rem;
+    margin-left: 8rem;
+}
+.copyright{
+    color: #ffff;
+    margin-top: 1rem;
+    font-family: poppins;
+    text-align: left;
+    margin-left: 8rem;
+}
+.Upper_Contact_Box .heading button:hover{
+    cursor: pointer;
+    
+}
