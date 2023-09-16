@@ -1,0 +1,63 @@
+#Body_signup{
+    background-color: #030711;
+    height: 100vh;
+    
+}
+.signup{
+    position: absolute;
+    margin-left: 32rem;
+    margin-top: 8rem;
+    width:30%;
+    border-radius:10px;
+    height: 35rem;   
+    background-color: rgb(15 23 42);
+}
+.signup_heading{
+    color: aliceblue;
+    text-align: center;
+    font-family: poppins;
+    font-weight: 400;
+    padding-top: 3rem;
+}
+
+.form input{
+    background-color: transparent;
+    border:1px solid rgb(29 40 58);
+    height:2rem;
+    width: 20rem;
+    padding: 15px;
+    margin-bottom: 0.5rem;
+    color: white;  
+}
+.form input:focus{
+    outline:none;
+    border: 1px solid #007fff;
+    color: white;   
+}
+.form input:hover{
+    border: 1px solid #007fff;
+}
+.form #Forget-pass{
+    text-decoration: none;
+    color:#007fff;
+    margin-left: 13rem;
+}
+#Login_btn{
+    width: 20rem;
+    height:3rem;
+    border-radius: 5px;
+    background-color:#007fff;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.form div{
+    color: #9a989d;
+    margin-top: 1rem;
+}
+.form span a{
+    text-decoration: none;
+    color:#007fff;
+}
+#Login_btn:hover{
+    background-color:#03519f;
+}
