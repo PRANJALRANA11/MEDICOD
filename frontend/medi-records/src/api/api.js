@@ -1,21 +1,56 @@
-import React from 'react'
+
 import axios from 'axios';
-export default async function api(formData) {
+
+export  async function signup_api(formData) {
   try {
     const response = await axios.post('http://127.0.0.1:80/signup', formData);
     if (response.status === 200) {
-      // console.log('User has been successfully registered', response);
-      // // Successful registration, you can redirect to a success page or do something else
+      console.log('User has been successfully registered', response);
       // history.push('/success'); // Redirect to a success page
-    } else {
-      // Handle error here, e.g., display an error message
-      // console.error('Error during registration');
+    } 
+  } catch (error) {
+    console.error('Error during registration');
+  }
+}
+
+export  async function signin_api(formData) {
+  try {
+    const response = await axios.post('http://127.0.0.1:80/signin', formData);
+    if (response.status === 200) {
+      console.log('User has been successfully logged in');
+      // history.push('/success'); // Redirect to a success page
     }
   } catch (error) {
-    // console.error('Error during registration:', error);
+    console.error('Error during registration');
   }
-  return (
-    <>
-    </>
-  )
+}
+
+export  async function Email_Verification_api(formData) {
+  try {
+    const response = await axios.post('http://127.0.0.1:80/emailverify', formData);
+    if (response.status === 200) {
+      localStorage.setItem('token', response.data);
+      // history.push('/success'); // Redirect to a success page
+    }
+  } catch (error) {
+    console.error('Error during verification');
+  }
+}
+
+export async function Reset_password_api(formData) {
+  try {
+    const token = localStorage.getItem('token');
+    const response = await axios.post('http://127.0.0.1:80/resetpassword', formData, {
+      headers: {
+        'EmailVerify': token,
+      },
+    });
+    if (response.status === 200) {
+      console.log('Password reset succcessfully');
+    }else{
+      console.log('Password reset failed');
+    } 
+  } catch (error) {
+    console.error('Error during reset password', error);
+  }
 }

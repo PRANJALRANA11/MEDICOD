@@ -3,35 +3,61 @@ const signup=require("../models/db_auth.js");
 const bcrypt = require('bcryptjs');
 const jwtSecret = process.env.JWT_SECRET;
 const jwt = require('jsonwebtoken');
+
 exports.signup=async(req,res)=>{
-	// This function handles user registration by checking if the provided email exists in the database.
-	const{name,email,password}=req.body;
  	try{
+			const{ name, email, password }=req.body;
+			// Check if user already exists
+			let userexist = await signup.findOne({ email: email });
+			if(!userexist){
+  				const newUser = new signup({ name, email, password });
+  				const User_save = await newUser.save();
+  				console.log(newUser);
+				const token = jwt.sign({id: newUser.id },jwtSecret,{ expiresIn: '48h' });
+				res.status(200).json("signed up successfully");
+				}
+			else{
+				res.status(400).json("user already exist");
+			}
+    	}
+	catch(error){
+    	res.status(400).json("error in authentication");
+    	}
+}
+
+exports.signin=async(req,res)=>{
+ 	try{
+		const{email,password}=req.body;
 		let userexist = await signup.findOne({ email: email });
-// If the email exists, it checks the provided password's validity.
 		if (userexist) {
   				const isPasswordValid = await bcrypt.compare(password, userexist.password);
-  		
-// If both the email and password are valid, it responds with a message that the user already exists.
 				if (isPasswordValid) {
-    			res.status(200).json({ message: "User already exists." });
-  		} 
+					const token = jwt.sign({id: userexist.id },jwtSecret,{ expiresIn: '48h' });
+					res.status(200).json({ message: "Logged in" });
+				} 
   		else {
-    // Handle the case where the email exists but the password is incorrect
-    			res.status(401).json({ message: "Invalid password." });
-  }
-		} 
-		else {
-  				const con = new signup({ name, email, password });
-  				const cont = await con.save();
-  				console.log(con);
-				const token = jwt.sign({id: con.id },jwtSecret,{ expiresIn: '48h' });
-				  // Send the token to the client
-				res.status(200).json("signed up successfully");
-			}
-			
+    			res.status(401).json({ message: "Invalid credentials" });
+  			}
+		} 	
     }
 	catch(error){
-    	res.status(400).json(error.message);
+    	res.status(400).json("error in authentication");
     	}
+}
+
+exports.resetpassword=async(req,res)=>{
+	try {
+		const email=req.user.id;
+		const{password}=req.body;
+		let userexist = await signup.findOne({ email: email });
+		if (userexist) {
+			await signup.updateOne({ email: email }, { $set: { password: password } });
+			res.status(200).json("password reset successfully");
+		}
+		else{
+			res.status(400).json("user not found");
+		}
+	} catch (error) {
+		res.status(400).json(error.message);
+	}
 }

@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 // import { Link } from 'react-router-dom';
-import api from '../../api/api';
+import {signup_api} from '../../api/api';
 import '../../Styles/Home-styles/Authentication.css';
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
 
@@ -23,8 +24,8 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await api(formData);
-      // console.log(response.data);
+      const response = await signup_api(formData);
+      console.log(response.data);
     } catch (error) {
       // console.error('Error during registration:', error);
     }
@@ -34,19 +35,19 @@ export default function Signup() {
       <div className='signup'>
         <h1 className='signup_heading'>Welcome To Medicod</h1>
         <form className='form'  onSubmit={handleSubmit} method="POST">
-          <input type='text' placeholder='Enter Your Name' name='name'
+          <input type='text' placeholder='Enter Your Name' name='name' required={true}
           value={formData.name}
           onChange={handleFormData}/>
-          <input type='email' placeholder='Enter Your Email' name='email'
+          <input type='email' placeholder='Enter Your Email' name='email' required={true}
           value={formData.email}
           onChange={handleFormData}/>
-          <input type='password' placeholder='Create Password' name='password'
+          <input type='password' placeholder='Create Password' name='password' required={true}
           value={formData.password}
           onChange={handleFormData}/>
           <button id='Login_btn' type='submit'>Sign Up</button>
           <div>
             <span>
-              Already have an account? <a href='/signin'>Sign in now</a>
+              Already have an account? <Link to='/Signin'>Sign in now</Link>
             </span>
           </div>
         </form>
