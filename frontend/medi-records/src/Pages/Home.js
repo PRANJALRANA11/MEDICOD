@@ -15,16 +15,17 @@ import Resetpassword from '../Components/Home_components/Resetpassword'
 export default function Home() {
   return (
     <div>
-      <Navbar/>
+      
       <Routes>
       <Route path="/" element={<>
+      <Navbar/>
        <Header/>
       <Section/>
       <Pricing/>
       <Contact/>
       </>} />
-      <Route path="/Signup" element={<Signup/>} />
-      <Route path="/Signin" element={<Signin/>} />
+      <Route path="/Signup" element={<> <Navbar/><Signup/></>} />
+      <Route path="/Signin" element={<> <Navbar/><Signin/></>} />
       <Route path="/forgotpassword" element={<Forgotpassword/>} />
       <Route path="/resetpassword" element={<Resetpassword/>} />
       </Routes>

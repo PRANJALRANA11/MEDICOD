@@ -1,0 +1,37 @@
+.Side_bar_right{
+    width: 20%;
+    height: 42.2rem;
+    background-color: #f6f8fc;
+}
+.New_doc button{
+    margin-top: 5rem;
+    background-color: #c2e7ff;
+    width: 142px;
+    height: 56px;
+    padding: 0px 8px 0px 0px;
+    font:14px poppins;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+.New_doc button:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 1s;
+}
+.Preview_Doc{
+    margin-top: 3rem;
+}
+.Preview_Doc p{
+    font: 24px poppins;
+    color: #000000;
+    margin-left: 1rem;
+}
+.Live-doc-preview{
+    margin-top: 1rem;
+    border: 1px solid red;
+    width: 12rem;
+    height: 20rem;
+    margin-left: 4rem;
+    border-radius: 10px;
+}

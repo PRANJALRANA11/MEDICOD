@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { Reset_password_api } from '../../api/api';
 import '../../Styles/Home-styles/Authentication.css';
+import { Link } from 'react-router-dom';
 
 export default function Resetpassword() {
 
@@ -22,7 +23,7 @@ export default function Resetpassword() {
     e.preventDefault();
     try {
       const response = await Reset_password_api(formData);
-      setSuccessMessage('Your password has been reset. Please login with your new password.');
+      setSuccessMessage('Your password has been reset');
       // console.log(response.data);
     } catch (error) {
       // console.error('Error during registration:', error);
@@ -40,7 +41,7 @@ export default function Resetpassword() {
           value={formData.password}
           onChange={handleFormData}/>
           <button id='Login_btn' type='submit'>RESET</button>
-          {successMessage && <p className='success-message' style={{color:"#fff"}}>{successMessage}</p>}
+          {successMessage && <p className='success-message' style={{color:"#fff"}}>{successMessage} <Link to="/Signin" style={{textDecoration:"none",color:"#4545fc"}}>Please Login </Link></p>}
         </form>
       </div>
     </div>

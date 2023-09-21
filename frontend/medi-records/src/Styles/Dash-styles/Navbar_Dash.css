@@ -1,0 +1,29 @@
+.navbar_dash{
+    background-color: #f6f8fc;
+    height: 64px;
+    /* position: fixed; */
+    width: 100%;
+    z-index: 1000;
+}
+.container_dash{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    margin: 0 60px;
+}
+.navbar-brand_dash a{
+    font-size: 34px;
+    font-family: poppins;
+    text-decoration: none;
+    /* color: #ffffff; */
+    font-weight: bold;
+    margin-right: 44rem;
+}
+.navbar-links_dash{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 60px; 
+}
+

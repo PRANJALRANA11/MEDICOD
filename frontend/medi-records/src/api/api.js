@@ -33,7 +33,7 @@ export  async function Email_Verification_api(formData) {
       // history.push('/success'); // Redirect to a success page
     }
   } catch (error) {
-    console.error('Error during verification');
+    console.error('Error during verification', error);
   }
 }
 
@@ -47,10 +47,13 @@ export async function Reset_password_api(formData) {
     });
     if (response.status === 200) {
       console.log('Password reset succcessfully');
+      return response.status;
     }else{
       console.log('Password reset failed');
+      return response.status;
     } 
   } catch (error) {
     console.error('Error during reset password', error);
+    
   }
 }
