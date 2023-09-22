@@ -1,37 +1,42 @@
 .Side_bar_right{
-    width: 20%;
+    width: 15%;
     height: 42.2rem;
-    background-color: #f6f8fc;
+    background-color: #f7f5f2;
+    border-right: 1px solid #e6e6e6;
+    text-align: left;
+    position: fixed;
+} 
+
+.Side_bar_right .right-content{
+    margin-top: 2rem;
+    padding-left: 32px;
 }
-.New_doc button{
-    margin-top: 5rem;
-    background-color: #c2e7ff;
-    width: 142px;
-    height: 56px;
-    padding: 0px 8px 0px 0px;
-    font:14px poppins;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
+.Side_bar_right .right-content p{
+    font-family: poppins;
+    color: #736c64;
 }
-.New_doc button:hover{
+.right-content p:hover{
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: 1s;
+    color: black;
 }
-.Preview_Doc{
-    margin-top: 3rem;
+.Storage{
+    margin-top: 20rem;
+    border-top:1px solid #e6e6e6;
 }
-.Preview_Doc p{
-    font: 24px poppins;
-    color: #000000;
-    margin-left: 1rem;
+.Storage p{
+    font-family: poppins;
+    color: #736c64;
+    margin-left: 2rem;
 }
-.Live-doc-preview{
-    margin-top: 1rem;
-    border: 1px solid red;
-    width: 12rem;
-    height: 20rem;
-    margin-left: 4rem;
-    border-radius: 10px;
+
+.storage-bar{
+   width: 70%;
+   margin-left: 1.7rem;
+   background-color: #a39c9c;
+   border-radius: 10px;
+   
+}
+.Storage span{
+    font-family: poppins;
+    margin-left: 2rem;
 }
