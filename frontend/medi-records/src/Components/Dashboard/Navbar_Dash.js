@@ -3,6 +3,7 @@ import '../../Styles/Dash-styles/Navbar_Dash.css'; // Import the CSS file for th
 import { Link } from 'react-router-dom';
 const Navbar_Dash = () => {
   return (
+    <>
     <nav className="navbar_dash">
       <div className="container_dash">
         <div className="navbar-brand_dash">
@@ -34,6 +35,7 @@ const Navbar_Dash = () => {
         </ul>
       </div>
     </nav>
+    </>
   );
 };
 

@@ -5,6 +5,7 @@
     border-right: 1px solid #e6e6e6;
     text-align: left;
     position: fixed;
+    top: 65px;
 } 
 
 .Side_bar_right .right-content{

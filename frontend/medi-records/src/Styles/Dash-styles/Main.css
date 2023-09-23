@@ -1,0 +1,61 @@
+.Heading{
+    font-size: 1.5rem;
+    font-family: poppins;
+    color: #000000;
+    text-align: left;
+    margin-left: 18rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+.Home_Dash label{
+    font-size: 1.5rem;
+    font-family: poppins;
+    color: #000000;
+}
+.Report_input{
+   width: 30%;
+   height: 2rem;
+   border:1px solid #000000;
+   margin-top: 1rem;
+   margin-right: 31rem;
+   margin-bottom: 2rem;
+   font-family: poppins;
+   padding: 5px;
+}
+.Appointment{
+    display: flex;
+    margin-left: 18.5rem;
+}
+.Appointment button{
+    background-color: #0f9fe2;
+    font-family: poppins;
+    padding: 5px;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 7rem;
+    border: none;
+    margin-right:1rem;
+    margin-top: 1rem;
+}
+.Appointment button:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.Save_doc{
+    margin-right:16rem;
+}
+.Save_doc_button{
+    background-color: #4752ef;
+    font-family: poppins;
+    padding: 5px;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 7rem;
+    border: none;
+    margin-right:1rem;
+    margin-top: 5rem;
+}
+.Save_doc_button:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
