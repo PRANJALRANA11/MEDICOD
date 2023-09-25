@@ -1,0 +1,35 @@
+.files{
+    margin-top: 7rem;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    margin-left: 17rem;
+}
+.report_image img{
+    width:5rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.report_name p{
+    margin-bottom: 1rem;
+    font:14px poppins;
+    margin-left:10px;
+}
+.clinic_name{
+    font:14px poppins;
+}
+.upload_date{
+    font:14px poppins;
+}
+.appointment_date{
+    font:14px poppins;
+}
+.file_status{
+    font-size: 1.5rem;
+    font-family: poppins;
+    color: #000000;
+    text-align: left;
+    margin-left: 17rem;
+    padding-top: 8rem;
+}

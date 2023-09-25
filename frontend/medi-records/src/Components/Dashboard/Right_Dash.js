@@ -1,20 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../../Styles/Dash-styles/Right_Dash.css'; // Import the CSS file for the Right_Dash component
 import ProgressBar from './ProgressBar';
-import Main from './Main';
-export default function Right_Dash() {
 
-    const Handle_click_All_files = () => {
-        
-    }
+export default function Right_Dash() {
 
   return (
     <>
-        <Main/>
         <div className='Side_bar_right'>
-            <div className='right-content'>
-                <p>All Files</p>
-            </div>
             <div className='right-content'>
                 <p>Saved files</p>
             </div>
