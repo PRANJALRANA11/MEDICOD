@@ -9,42 +9,39 @@ export default function Right_dash_files(props) {
       clinicName: "Clinic A",
       uploadedPhoto: "https://i.pinimg.com/originals/da/2e/db/da2edbf7c34fd73ed79784235e27aa29.png",
       uploadDate: "Saved On 23 June 2023",
-      appointmentDate: "Appointment On 23 June 2023"
+      
     },
     {
       reportName: "Report A",
       clinicName: "Clinic A",
       uploadedPhoto: "https://i.pinimg.com/originals/da/2e/db/da2edbf7c34fd73ed79784235e27aa29.png",
       uploadDate: "Saved On 23 June 2023",
-      appointmentDate: "Appointment On 23 June 2023"
+      
     },
     {
       reportName: "Report A",
       clinicName: "Clinic A",
       uploadedPhoto: "https://i.pinimg.com/originals/da/2e/db/da2edbf7c34fd73ed79784235e27aa29.png",
       uploadDate: "Saved On 23 June 2023",
-      appointmentDate: "Appointment On 23 June 2023"
+      
     },
     {
       reportName: "Report A",
       clinicName: "Clinic A",
       uploadedPhoto: "https://i.pinimg.com/originals/da/2e/db/da2edbf7c34fd73ed79784235e27aa29.png",
       uploadDate: "Saved On 23 June 2023",
-      appointmentDate: "Appointment On 23 June 2023"
     },
     {
       reportName: "Report A",
       clinicName: "Clinic A",
       uploadedPhoto: "https://i.pinimg.com/originals/da/2e/db/da2edbf7c34fd73ed79784235e27aa29.png",
       uploadDate: "Saved On 23 June 2023",
-      appointmentDate: "Appointment On 23 June 2023"
     },
     {
       reportName: "Report A",
       clinicName: "Clinic A",
       uploadedPhoto: "https://i.pinimg.com/originals/da/2e/db/da2edbf7c34fd73ed79784235e27aa29.png",
       uploadDate: "Saved On 23 June 2023",
-      appointmentDate: "Appointment On 23 June 2023"
     },
   
   ]
@@ -64,7 +61,6 @@ export default function Right_dash_files(props) {
             <div className='Report_details'>
               <div className='clinic_name'>{report.clinicName}</div>
               <div className='upload_date'>{report.uploadDate}</div>
-              <div className='appointments_date'>{report.appointmentDate}</div>
             </div>
           </div>
       ))}

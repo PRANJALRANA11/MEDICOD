@@ -2,6 +2,7 @@ import React from 'react'
 import  '../../Styles/Dash-styles/Main.css'
 
 export default function Main() {
+  const [startDate, setStartDate] = React.useState(new Date());
   return (
     <div className='Home_Dash'>
       <div className='Heading'>
@@ -15,11 +16,8 @@ export default function Main() {
       <div className='Clinic_Title'>
         <input type='text' className='Report_input' placeholder='Enter the name of clinic or hospital'></input>
       </div>
-        <label style={{marginRight:"36rem"}}>Select Appointment Date if any</label>
+        <label style={{marginRight:"43rem"}}>Upload Your Document</label>
       <div className='Appointment'>
-        <div>
-            <button>Select Date</button>
-        </div>
         <div>
             <button className='Save_doc_button' style={{width:"9rem",backgroundColor:"#3f66f9"}}>Upload Your Report</button>
         </div>
