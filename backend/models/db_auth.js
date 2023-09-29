@@ -15,6 +15,8 @@ const contactSchema = new mongoose.Schema({
       }
           });
   
+
+  
   //hashing
   contactSchema.pre("save", async function (next) {
       if (this.isModified("password")) {
@@ -25,5 +27,6 @@ const contactSchema = new mongoose.Schema({
   
   //making model
   const signup = new mongoose.model("Signup", contactSchema);
+
   
   module.exports = signup;

@@ -57,3 +57,13 @@ export async function Reset_password_api(formData) {
     
   }
 }
+
+export async function store_data_api(Data) {
+  try {
+    var response = await axios.post('http://127.0.0.1:80/store_report_data', Data);
+    console.log(response.data)
+  } catch (error) {
+    console.log(response.data);
+  }
+
+}

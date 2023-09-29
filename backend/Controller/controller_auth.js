@@ -1,8 +1,13 @@
 const dotenv = require("dotenv").config();  
 const signup=require("../models/db_auth.js");
+const storage=require("../models/db_storage.js");
 const bcrypt = require('bcryptjs');
 const jwtSecret = process.env.JWT_SECRET;
 const jwt = require('jsonwebtoken');
+const multer = require('multer');
+
+// Define Multer storage configuration
+
 
 exports.signup=async(req,res)=>{
  	try{
@@ -61,3 +66,24 @@ exports.resetpassword=async(req,res)=>{
 		res.status(400).json(error.message);
 	}
 }
+
+exports.save_report_details =  async (req, res) => {
+	try {
+	  if (!req.file) {
+		return res.status(400).json({ message: 'No file uploaded' });
+	  }
+		const {ReportName,ClinicName}=req.body;
+		const newUser = new storage({ ReportName,ClinicName });
+  				const User_save = await newUser.save();
+  				console.log(newUser);
+		
+
+	  return res.status(200).json({ message: 'Report saved successfully' });
+	} catch (error) {
+		console.log("no file uploaded")
+	  return res.status(400).json(error.message);
+	}
+  }
+  
+  
+  
