@@ -67,3 +67,12 @@ export async function store_data_api(Data) {
   }
 
 }
+export async function fetch_data_api() {
+  try {
+    var response = await axios.get('http://127.0.0.1:80/fetch_report_data');
+    return response.data
+  } catch (error) {
+    console.log(response.data);
+  }
+
+}

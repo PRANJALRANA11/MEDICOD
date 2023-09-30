@@ -29,5 +29,6 @@ router.post('/signin', Controller_auth.signin);
 router.post('/emailverify', Email.mail_otp);
 router.post('/resetpassword',middleware.verifyEmail, Controller_auth.resetpassword);
 router.post('/store_report_data',upload.single('uploaded_file'),Controller_auth.save_report_details);
+router.get('/fetch_report_data',Controller_auth.fetch_report_details);
 
 module.exports=router;

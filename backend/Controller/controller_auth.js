@@ -84,6 +84,21 @@ exports.save_report_details =  async (req, res) => {
 	  return res.status(400).json(error.message);
 	}
   }
-  
-  
-  
+
+  const fs = require('fs').promises;
+
+exports.fetch_report_details = async (req, res) => {
+  try {
+    const data = await fs.readFile('uploads/1695955253400-assignment (1).pdf');
+    const base64Data = data.toString('base64');
+    const pdfSrc = `data:application/pdf;base64,${base64Data}`;
+    
+    // Render the PDF using an iframe
+    const html = `<iframe width="100%" height="800px"
+	 src="${pdfSrc}" frameborder="0" allowfullscreen></iframe>`;
+    return res.status(200).send(pdfSrc);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: 'Internal Server Error' });
+  }
+};

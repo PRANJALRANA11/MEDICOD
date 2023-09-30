@@ -10,7 +10,7 @@ export default function Dashboard() {
         <Navbar_Dash/>
         <Right_Dash/>
       </>} />
-        </Routes>
+      </Routes>
     </div>
   )
 }

@@ -23,6 +23,7 @@
     "nodemailer": "^6.9.5",
     "nodemon": "^3.0.1",
     "otp-generator": "^4.0.1",
+    "pdf-parse": "^1.1.1",
     "react-calendar": "^4.6.0"
   }
 }
