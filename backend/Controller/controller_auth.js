@@ -67,36 +67,38 @@ exports.resetpassword=async(req,res)=>{
 	}
 }
 
+
 exports.save_report_details =  async (req, res) => {
 	try {
 	  if (!req.file) {
 		return res.status(400).json({ message: 'No file uploaded' });
 	  }
-		const {ReportName,ClinicName}=req.body;
-		const newUser = new storage({ ReportName,ClinicName });
+
+		const {ReportName,ClinicName,uploaded_file_name}=req.body;
+		const newUser = new storage({ ReportName,ClinicName,uploaded_file_name
+		,timestamp: new Date()});
   				const User_save = await newUser.save();
   				console.log(newUser);
-		
-
-	  return res.status(200).json({ message: 'Report saved successfully' });
+	  		return res.status(200).json({ message: 'Report saved successfully' });
 	} catch (error) {
-		console.log("no file uploaded")
+		console.log(error.message)
 	  return res.status(400).json(error.message);
 	}
   }
 
-  const fs = require('fs').promises;
-
+const fs = require('fs').promises;
 exports.fetch_report_details = async (req, res) => {
   try {
+	const {ReportName}=req.params;
     const data = await fs.readFile('uploads/1695955253400-assignment (1).pdf');
     const base64Data = data.toString('base64');
     const pdfSrc = `data:application/pdf;base64,${base64Data}`;
-    
-    // Render the PDF using an iframe
-    const html = `<iframe width="100%" height="800px"
-	 src="${pdfSrc}" frameborder="0" allowfullscreen></iframe>`;
-    return res.status(200).send(pdfSrc);
+    const details=await storage.find({});
+	const file={
+		"pdfSrc":pdfSrc,
+		"details":details
+	}
+    return res.status(200).json(file);
   } catch (error) {
     console.log(error.message);
     return res.status(500).json({ error: 'Internal Server Error' });

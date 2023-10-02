@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
         const fileExt = path.extname(file.originalname);
 
         // Define how to name the uploaded files with the original extension
-        cb(null, Date.now() + '-' + file.originalname);
+        cb(null, Date().now + '-' + file.originalname);
     }
   });
   

@@ -70,7 +70,11 @@ export async function store_data_api(Data) {
 export async function fetch_data_api() {
   try {
     var response = await axios.get('http://127.0.0.1:80/fetch_report_data');
-    return response.data
+    const file={
+      pdfSrc:response.data.pdfSrc,
+      details:response.data.details
+    }
+    return file;
   } catch (error) {
     console.log(response.data);
   }

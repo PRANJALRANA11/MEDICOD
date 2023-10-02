@@ -21,6 +21,7 @@ export default function Main() {
         formData.append('ReportName', report_details.ReportName);
         formData.append('ClinicName', report_details.ClinicName);
         formData.append('uploaded_file', report_details.uploaded_file);
+        formData.append('uploaded_file_name', report_details.uploaded_file_name);
         const response = await store_data_api(formData);
         // console.log(response.data);
       } catch (error) {
@@ -54,8 +55,15 @@ export default function Main() {
         <input
               className='Save_doc_button'
               style={{ width: '9rem', backgroundColor: '#3f66f9' }}
-              onChange={(e) => set_report_details
-                ({ ...report_details, uploaded_file: e.target.files[0] })}
+              name="uploaded_file"
+              onChange={(e) => {
+                const selectedFile = e.target.files[0];
+                if (selectedFile) {
+                  const fileName = selectedFile.name;            
+                  // Update the state with the selected file
+                  set_report_details({ ...report_details, uploaded_file_name: fileName, uploaded_file: e.target.files[0] });
+                }
+              }}
               // Use e.target.files[0] to access the selected file
               placeholder='Upload Your Report'
               type='file'
