@@ -40,7 +40,7 @@ export default function Main() {
         <input type='text' onChange={HandleChange} value={report_details.ReportName} 
         className='Report_input' name='ReportName' 
         placeholder='Enter Your Type of Report eg X-Ray, CT-scan, MRI ...' 
-        required={true}></input>
+        required={true} unique={true}></input>
       </div>
         <label style={{marginRight:"56rem"}}>Clinic</label>
       <div className='Clinic_Title'>

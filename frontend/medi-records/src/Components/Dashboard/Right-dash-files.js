@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../../Styles/Dash-styles/Right_files.css';
-import { fetch_data_api } from '../../api/api.js';
+import { fetch_data_api,fetch_one_data_api } from '../../api/api.js';
 import { pdf_img_url } from './Constants';
 
 export default function Right_dash_files(props) {
@@ -12,7 +12,16 @@ export default function Right_dash_files(props) {
     try {
       const response = await fetch_data_api(); // Fetch PDF data from the backend
       setDetails(response.details);
-      setPdfSrc(response.pdfSrc); // Set the PDF source in the state
+       // Set the PDF source in the state
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleClick = async (ReportName) => {
+    try {
+      const response = await fetch_one_data_api( ReportName);
+      setPdfSrc(response.pdfSrc);
+      // console.log(ReportName) // Fetch PDF data from the backend
     } catch (error) {
       console.log(error);
     }
@@ -27,7 +36,7 @@ export default function Right_dash_files(props) {
       <div className='file_status'>{props.state_files}</div>
       <div className='files'>
         {details.map((report, index) => (
-          <div className='report' key={index} onClick={handleFile}>
+          <div className='report' key={index}  onClick={() => handleClick(report.ReportName)}>
             <div className='report_name'>
               <p>{report.ReportName}</p>
             </div>

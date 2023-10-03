@@ -80,3 +80,18 @@ export async function fetch_data_api() {
   }
 
 }
+export async function fetch_one_data_api(report) {
+  try {
+    // console.log(ReportName)
+    var response = await axios.get('http://127.0.0.1:80/fetch_one_report_data',{params:{ReportName:report}});
+   
+    const file={
+      pdfSrc:response.data.pdfSrc,
+      details:response.data.details
+    }
+    return file;
+  } catch (error) {
+    console.log(response.data);
+  }
+
+}

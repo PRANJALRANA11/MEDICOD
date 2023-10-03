@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const storageSchema = new mongoose.Schema({
     ReportName:{
-      type:String,required:true
+      type:String,required:true,unique:true
       },
     ClinicName:{
       type:String,required:true

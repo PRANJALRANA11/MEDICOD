@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
         const fileExt = path.extname(file.originalname);
 
         // Define how to name the uploaded files with the original extension
-        cb(null, Date().now + '-' + file.originalname);
+        cb(null, file.originalname);
     }
   });
   
@@ -30,5 +30,6 @@ router.post('/emailverify', Email.mail_otp);
 router.post('/resetpassword',middleware.verifyEmail, Controller_auth.resetpassword);
 router.post('/store_report_data',upload.single('uploaded_file'),Controller_auth.save_report_details);
 router.get('/fetch_report_data',Controller_auth.fetch_report_details);
+router.get('/fetch_one_report_data',Controller_auth.fetch_one_report_details);
 
 module.exports=router;

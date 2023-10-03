@@ -88,19 +88,35 @@ exports.save_report_details =  async (req, res) => {
 
 const fs = require('fs').promises;
 exports.fetch_report_details = async (req, res) => {
+	const {ReportName,timestamp}=req.body;
   try {
-	const {ReportName}=req.params;
-    const data = await fs.readFile('uploads/1695955253400-assignment (1).pdf');
-    const base64Data = data.toString('base64');
-    const pdfSrc = `data:application/pdf;base64,${base64Data}`;
-    const details=await storage.find({});
-	const file={
-		"pdfSrc":pdfSrc,
-		"details":details
-	}
-    return res.status(200).json(file);
-  } catch (error) {
+		const details=await storage.find({});
+		console.log(details)
+		const file={
+			"pdfSrc":null,
+			"details":details
+		}
+		return res.status(200).json(file);
+  	} catch (error) {
     console.log(error.message);
     return res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+exports.fetch_one_report_details = async (req, res) => {
+	const {ReportName}=req.query;
+  try {
+		const details=await storage.findOne({ReportName});
+		console.log(ReportName)
+    	const data = await fs.readFile(`uploads/${details.uploaded_file_name}`);
+    	const base64Data = data.toString('base64');
+    	const pdfSrc = `data:application/pdf;base64,${base64Data}`;
+		const file={
+			"pdfSrc":pdfSrc,
+			"details":details
+		}
+    	return res.status(200).json(file);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json( error.message );
   }
 };
