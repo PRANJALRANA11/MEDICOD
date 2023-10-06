@@ -8,6 +8,7 @@ export default function Main() {
       ClinicName:" ",
       uploaded_file:null,
   })
+  const [save_btn_text,set_save_btn_text]=React.useState("Save")
 
   function HandleChange(e){
     const { name, value } = e.target;
@@ -23,6 +24,7 @@ export default function Main() {
         formData.append('uploaded_file', report_details.uploaded_file);
         formData.append('uploaded_file_name', report_details.uploaded_file_name);
         const response = await store_data_api(formData);
+        set_save_btn_text("Saved Successfully")
         // console.log(response.data);
       } catch (error) {
         // console.error('Error during registration:', error);
@@ -42,7 +44,7 @@ export default function Main() {
         placeholder='Enter Your Type of Report eg X-Ray, CT-scan, MRI ...' 
         required={true} unique={true}></input>
       </div>
-        <label style={{marginRight:"56rem"}}>Clinic</label>
+        <label style={{marginRight:"51rem"}}>Clinic Name</label>
       <div className='Clinic_Title'>
         <input type='text'  className='Report_input' 
         onChange={HandleChange} name='ClinicName' 
@@ -54,7 +56,7 @@ export default function Main() {
         <div>
         <input
               className='Save_doc_button'
-              style={{ width: '9rem', backgroundColor: '#3f66f9' }}
+              style={{ width: '12rem', backgroundColor: '#3f66f9',cursor:"pointer" }}
               name="uploaded_file"
               onChange={(e) => {
                 const selectedFile = e.target.files[0];
@@ -68,14 +70,11 @@ export default function Main() {
               placeholder='Upload Your Report'
               type='file'
             />
+            <button className='Save_doc_button' type='submit' >{save_btn_text}</button>
         </div>
       </div>
-      <div className='Upload_doc'>
-      </div>
       <div className='Save_doc'>
-        <button className='Save_doc_button' type='submit' >Save</button>
-        <button className='Save_doc_button' 
-        style={{width:"9rem",backgroundColor:"red"}}>Discard and New</button>
+  
       </div>
       </form>
     </div>

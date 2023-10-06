@@ -40,12 +40,6 @@ export default function Right_Dash() {
             <div className='right-content'>
                 <p onClick={() => { Handle_saved_files(); Handle_screen(); }}>Saved files</p>
             </div>
-            <div className='right-content'>
-                <p onClick={()=>{Handle_shared_files();Handle_screen();}}>Shared files</p>
-            </div>
-            <div className='right-content'>
-                <p onClick={()=>{Handle_deleted_files(); Handle_screen()}}>Deleted files</p>
-            </div>
             <div className='Storage'>
                 <p>Basic Plan</p>
                 <div className='storage-bar'>

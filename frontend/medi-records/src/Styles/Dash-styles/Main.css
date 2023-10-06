@@ -42,7 +42,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .Save_doc{
-    margin-right:16rem;
+    margin-right:12rem;
 }
 .Save_doc_button{
     background-color: #4752ef;
@@ -50,13 +50,15 @@
     padding: 5px;
     color: aliceblue;
     border-radius: 10px;
-    width: 7rem;
+    width: 15rem;
     border: none;
     margin-right:1rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    
 }
 .Save_doc_button:hover{
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 1s;
 }
 

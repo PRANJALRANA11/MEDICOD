@@ -95,3 +95,12 @@ export async function fetch_one_data_api(report) {
   }
 
 }
+
+export async function delete_api(report){
+  try {
+    var response = await axios.delete('http://127.0.0.1:80/delete_data',{params:{ReportName:report}});
+   
+  } catch (error) {
+    console.log(response.data);
+  }
+}

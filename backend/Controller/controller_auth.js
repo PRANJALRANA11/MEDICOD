@@ -88,7 +88,7 @@ exports.save_report_details =  async (req, res) => {
 
 const fs = require('fs').promises;
 exports.fetch_report_details = async (req, res) => {
-	const {ReportName,timestamp}=req.body;
+	const {ReportName}=req.body;
   try {
 		const details=await storage.find({});
 		console.log(details)
@@ -115,6 +115,19 @@ exports.fetch_one_report_details = async (req, res) => {
 			"details":details
 		}
     	return res.status(200).json(file);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json( error.message );
+  }
+};
+exports.delete_details = async (req, res) => {
+	const {ReportName}=req.query;
+  try {
+		const details=await storage.findOne({ReportName});
+		// console.log(details)
+		const delete_file=await storage.deleteOne({ReportName});
+		console.log(delete_file)
+    	return res.status(200).json("file deleted successfully");
   } catch (error) {
     console.log(error.message);
     return res.status(500).json( error.message );

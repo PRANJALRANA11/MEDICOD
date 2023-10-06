@@ -11,6 +11,11 @@
     height: auto;
     margin-bottom: 1rem;
 }
+.report_image img:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 1s;
+}
 .report_name p{
     margin-bottom: 1rem;
     font:14px poppins;

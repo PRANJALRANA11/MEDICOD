@@ -1,34 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import '../../Styles/Dash-styles/Right_files.css';
-import { fetch_data_api,fetch_one_data_api } from '../../api/api.js';
+import { fetch_data_api, fetch_one_data_api, delete_api } from '../../api/api.js';
 import { pdf_img_url } from './Constants';
 
 export default function Right_dash_files(props) {
-  const [pdfSrc, setPdfSrc] = useState(null); // State to store the PDF source
-  const [details, setDetails] = useState([]); // Initialize details as an empty array
+  const [pdfSrc, setPdfSrc] = useState(null);
+  const [details, setDetails] = useState([]);
 
-  // Function to fetch and set the PDF source
   const handleFile = async () => {
     try {
-      const response = await fetch_data_api(); // Fetch PDF data from the backend
+      const response = await fetch_data_api();
       setDetails(response.details);
-       // Set the PDF source in the state
     } catch (error) {
       console.log(error);
     }
   };
+
   const handleClick = async (ReportName) => {
     try {
-      const response = await fetch_one_data_api( ReportName);
+      const response = await fetch_one_data_api(ReportName);
       setPdfSrc(response.pdfSrc);
-      // console.log(ReportName) // Fetch PDF data from the backend
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDeleteClick = async (ReportName) => {
+    try {
+      // Delete the report from the backend
+      await delete_api(ReportName);
+      
+      // Filter out the deleted report from the details array
+      const updatedDetails = details.filter((report) => report.ReportName !== ReportName);
+      setDetails(updatedDetails);
+      if(updatedDetails.length===0){
+        setPdfSrc(null);
+      }
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    handleFile(); // Call handleFile when the component mounts
+    handleFile();
   }, []);
 
   return (
@@ -36,16 +50,27 @@ export default function Right_dash_files(props) {
       <div className='file_status'>{props.state_files}</div>
       <div className='files'>
         {details.map((report, index) => (
-          <div className='report' key={index}  onClick={() => handleClick(report.ReportName)}>
-            <div className='report_name'>
-              <p>{report.ReportName}</p>
+          <div className='report' key={index}>
+            <div onClick={() => handleClick(report.ReportName)}>
+              <div className='report_name'>
+                <p>{report.ReportName}</p>
+              </div>
+              <div className='report_image'>
+                <img src={pdf_img_url} alt='report' />
+              </div>
+              <div className='Report_details'>
+                <div className='clinic_name'>{report.ClinicName}</div>
+                <div className='upload_date'>{new Date(report.timestamp).toLocaleString()}</div>
+              </div>
             </div>
-            <div className='report_image'>
-              <img src={pdf_img_url} alt='report' />
-            </div>
-            <div className='Report_details'>
-              <div className='clinic_name'>{report.ClinicName}</div>
-              <div className='upload_date'>{new Date(report.timestamp).toLocaleString()}</div>
+            <div className='delete_btn_div'>
+              <button
+                className='Save_doc_button'
+                onClick={() => handleDeleteClick(report.ReportName)}
+                style={{ backgroundColor: "red", width: "9rem", marginTop: "1rem" }}
+              >
+                Delete Report
+              </button>
             </div>
           </div>
         ))}
@@ -54,7 +79,7 @@ export default function Right_dash_files(props) {
             title='pdf'
             width='100%'
             height='700vh'
-            src={pdfSrc} // Set the PDF source as the src attribute
+            src={pdfSrc}
             frameBorder='0'
           ></iframe>
         </div>

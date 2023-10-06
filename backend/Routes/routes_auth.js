@@ -31,5 +31,6 @@ router.post('/resetpassword',middleware.verifyEmail, Controller_auth.resetpasswo
 router.post('/store_report_data',upload.single('uploaded_file'),Controller_auth.save_report_details);
 router.get('/fetch_report_data',Controller_auth.fetch_report_details);
 router.get('/fetch_one_report_data',Controller_auth.fetch_one_report_details);
+router.delete('/delete_data',Controller_auth.delete_details);
 
 module.exports=router;
