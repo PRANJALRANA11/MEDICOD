@@ -3,7 +3,7 @@ import '../../Styles/Home-styles/Section.css';
 export default function Section() {
   return (
     <>
-      <div className='Section_div'>
+      <div className='Section_div' id='Section'>
         <div className='Section_div_1'>
           <div className='Section_div_1_1'>
             <div className='Section_div_1_1_1'>
@@ -44,7 +44,7 @@ export default function Section() {
             </div>
           </div>
         </div>
-        <div className='Section_div_2'>
+        <div className='Section_div_2' id='About'>
           <div className='Section_div_2_1'>
             Supercharge your health journey with
           </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../Styles/Home-styles/Header.css'; 
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -57,12 +58,12 @@ export default function Header() {
                     marginTop:"30px",
                     marginLeft: "17px",
                         }}>
-                    <a href='/' style={{
+                    <Link to='/Dashboard' style={{
                         textDecoration:"none",
                         color:"#000",
                                         }}>
                         Get Started
-                    </a>
+                    </Link>
                 </div>
                 <div style={{
                     display:"flex",

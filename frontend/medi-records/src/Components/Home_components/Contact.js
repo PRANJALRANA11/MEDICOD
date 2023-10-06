@@ -2,7 +2,7 @@ import React from 'react'
 import '../../Styles/Home-styles/Contact.css'; 
 export default function Contact() {
   return (
-    <div className='Contact_div'>
+    <div className='Contact_div' id='Contact'>
       <div className='Upper_Contact_Box'>
         <div className='heading'>
             Let's Get In Touch

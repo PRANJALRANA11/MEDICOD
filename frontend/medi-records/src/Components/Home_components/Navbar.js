@@ -10,13 +10,13 @@ const Navbar = () => {
         </div>
         <ul className="navbar-links">
           <li>
-            <a href="/appointments">About</a>
+            <a href="#About">About</a>
           </li>
           <li>
-            <a href="/appointments">Contact</a>
+            <a href="#Contact">Contact</a>
           </li>
           <li>
-            <a href="/telemedicine">Records</a>
+            <Link to="/Dashboard">Records</Link>
           </li>
           <li>
             <Link to="/Signup"style={{

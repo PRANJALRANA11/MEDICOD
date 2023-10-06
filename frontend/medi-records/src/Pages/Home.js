@@ -12,6 +12,7 @@ import Resetpassword from '../Components/Home_components/Resetpassword'
 
 
 
+
 export default function Home() {
   return (
     <div>

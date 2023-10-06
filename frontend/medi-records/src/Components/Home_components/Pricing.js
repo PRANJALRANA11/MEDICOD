@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../Styles/Home-styles/Pricing.css';
+import { Link } from 'react-router-dom';
 export default function Pricing() {
   return (
     <>
@@ -44,7 +45,7 @@ export default function Pricing() {
                 Email support
               </div>
               <div className='Section_div_1_1_4'>
-                <a href='/'>Get Started</a>
+                <Link to='/Dashboard'>Get Started</Link>
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ export default function Pricing() {
                 Priority email support
               </div>
               <div className='Section_div_1_1_4'>
-                <a href='/'>Get Started</a>
+                <Link to='/Dashboard'>Get Started</Link>
               </div>
             </div>
           </div>
@@ -124,7 +125,7 @@ export default function Pricing() {
                 24/7 customer support
               </div>
               <div className='Section_div_1_1_4'>
-                <a href='/'>Get Started</a>
+                <Link to='/Dashboard'>Get Started</Link>
               </div>
             </div>
           </div>
