@@ -1,8 +1,11 @@
 import React from 'react';
 import '../../Styles/Dash-styles/Navbar_Dash.css'; // Import the CSS file for the Navbar component
 import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 const Navbar_Dash = () => {
+  const { isAuthenticated,user } = useAuth0();
   return (
+    
     <>
     <nav className="navbar_dash">
       <div className="container_dash">
@@ -27,10 +30,12 @@ const Navbar_Dash = () => {
             }}></i>
           </li>
           <li>
+            {isAuthenticated && 
             <span style={{
               fontFamily:"poppins",
               fontSize:"1.2rem",
-            }}>Pranjal</span>
+            }}>{user.name}</span>
+          }
           </li>
         </ul>
       </div>

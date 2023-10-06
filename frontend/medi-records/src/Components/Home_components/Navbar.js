@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../Styles/Home-styles/Navbar.css'; // Import the CSS file for the Navbar component
 import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
   return (
     <nav className="navbar">
       <div className="container">
@@ -16,14 +18,28 @@ const Navbar = () => {
             <a href="#Contact">Contact</a>
           </li>
           <li>
-            <Link to="/Dashboard">Records</Link>
+            {isAuthenticated ?  (<Link to="/Dashboard">Records</Link>):(
+              <Link onClick={() => loginWithRedirect()}>Records</Link>
+            
+            )}
+           
           </li>
           <li>
-            <Link to="/Signup"style={{
-            padding: "8px 16px",
-            border: "1px solid #1d283a",
-            borderRadius: "10px",
-                        }}>Signup</Link>
+            {isAuthenticated ? (
+            <Link style={{
+              padding: "8px 16px",
+              border: "1px solid #1d283a",
+              borderRadius: "10px",
+                          }}
+              onClick={() => logout({ logoutParams: { returnTo: window.location.origin }})}>Logout</Link>
+            ) : (
+              <Link style={{
+                padding: "8px 16px",
+                border: "1px solid #1d283a",
+                borderRadius: "10px",
+                            }}
+                onClick={() => loginWithRedirect()}>Signup</Link>
+            ) }
           </li>
         </ul>
       </div>

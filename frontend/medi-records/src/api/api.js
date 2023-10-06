@@ -6,7 +6,7 @@ export  async function signup_api(formData) {
     const response = await axios.post('http://127.0.0.1:80/signup', formData);
     if (response.status === 200) {
       console.log('User has been successfully registered', response);
-      // history.push('/success'); // Redirect to a success page
+      // history.push('/Dashboard'); // Redirect to a success page
     } 
   } catch (error) {
     console.error('Error during registration');
