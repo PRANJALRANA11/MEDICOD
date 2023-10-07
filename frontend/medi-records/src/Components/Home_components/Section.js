@@ -1,9 +1,6 @@
 import React from 'react'
 import '../../Styles/Home-styles/Section.css';
-import { useAuth0 } from "@auth0/auth0-react";
-import { Link } from 'react-router-dom';
 export default function Section() {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
       <div className='Section_div' id='Section'>
@@ -20,22 +17,7 @@ export default function Section() {
               you can trust that your vital health data is safe
             </div>
             <div className='Section_div_1_1_4'>
-            {isAuthenticated ? (
-                    <Link to='/Dashboard' style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}>
-                        Get Started
-                    </Link>
-                ) : (
-                    <Link style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}
-                        onClick={() => loginWithRedirect()}>
-                        Get Started
-                    </Link>
-                )}
+              <a href='/'>Get Started</a>
             </div>
           </div>
           <div className='Section_div_1_2'>

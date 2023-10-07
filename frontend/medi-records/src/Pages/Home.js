@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Navbar from '../Components/Home_components/Navbar'
 import Header from '../Components/Home_components/Header'
@@ -16,7 +16,6 @@ import Resetpassword from '../Components/Home_components/Resetpassword'
 export default function Home() {
   return (
     <div>
-      
       <Routes>
       <Route path="/" element={<>
       <Navbar/>
@@ -25,8 +24,8 @@ export default function Home() {
       <Pricing/>
       <Contact/>
       </>} />
-      <Route path="/Signup" element={<> <Navbar/><Signup/></>} />
-      <Route path="/Signin" element={<> <Navbar/><Signin/></>} />
+      <Route path="/Signup" element={<><Signup/></>} />
+      <Route path="/Signin" element={<><Signin/></>} />
       <Route path="/forgotpassword" element={<Forgotpassword/>} />
       <Route path="/resetpassword" element={<Resetpassword/>} />
       </Routes>

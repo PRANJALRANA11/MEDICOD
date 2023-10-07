@@ -1,13 +1,20 @@
 
 import axios from 'axios';
 
-export  async function signup_api(formData) {
+export  async function Signup_api(formData) {
   try {
     const response = await axios.post('http://127.0.0.1:80/signup', formData);
     if (response.status === 200) {
+      localStorage.setItem('token', response.data);
       console.log('User has been successfully registered', response);
-      // history.push('/Dashboard'); // Redirect to a success page
+      return response.status;
+      // Redirect to a success page
     } 
+    else{
+      console.log('User has not been successfully registered', response);
+      return response.status;
+    }
+    
   } catch (error) {
     console.error('Error during registration');
   }
@@ -17,9 +24,13 @@ export  async function signin_api(formData) {
   try {
     const response = await axios.post('http://127.0.0.1:80/signin', formData);
     if (response.status === 200) {
+      localStorage.setItem('token', response.data);
       console.log('User has been successfully logged in');
-      // history.push('/success'); // Redirect to a success page
+      return response.status;
+    }else{
+      return response.status;
     }
+    
   } catch (error) {
     console.error('Error during registration');
   }

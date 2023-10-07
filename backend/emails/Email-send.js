@@ -5,6 +5,7 @@ const signup=require("../models/db_auth.js");
 const jwtSecret = process.env.JWT_SECRET_EMAIL_VERIFY;
 const jwt = require('jsonwebtoken');
 
+// Generating The emails for password reset condition
 exports.mail_otp=async(req,res)=>{
     const {email}=req.body;
     try{

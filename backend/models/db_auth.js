@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 
-// creating schema
+// creating schema for authentication
 const contactSchema = new mongoose.Schema({
     name:{
       type:String,required:true
       },
     email:{
-      type:String,required:true,unique:true
+      type:String,required:true , unique:true
       },
     password:{
       type:String,required:true

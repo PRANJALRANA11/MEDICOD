@@ -1,9 +1,7 @@
 import React from 'react'
 import '../../Styles/Home-styles/Pricing.css';
 import { Link } from 'react-router-dom';
-import { useAuth0 } from "@auth0/auth0-react";
 export default function Pricing() {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
       <div className='Pricing_div'>
@@ -47,22 +45,7 @@ export default function Pricing() {
                 Email support
               </div>
               <div className='Section_div_1_1_4'>
-              {isAuthenticated ? (
-                    <Link to='/Dashboard' style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}>
-                        Get Started
-                    </Link>
-                ) : (
-                    <Link style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}
-                        onClick={() => loginWithRedirect()}>
-                        Get Started
-                    </Link>
-                )}
+                <Link to='/Dashboard'>Get Started</Link>
               </div>
             </div>
           </div>
@@ -100,22 +83,7 @@ export default function Pricing() {
                 Priority email support
               </div>
               <div className='Section_div_1_1_4'>
-              {isAuthenticated ? (
-                    <Link to='/Dashboard' style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}>
-                        Get Started
-                    </Link>
-                ) : (
-                    <Link style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}
-                        onClick={() => loginWithRedirect()}>
-                        Get Started
-                    </Link>
-                )}
+                <Link to='/Dashboard'>Get Started</Link>
               </div>
             </div>
           </div>
@@ -157,22 +125,7 @@ export default function Pricing() {
                 24/7 customer support
               </div>
               <div className='Section_div_1_1_4'>
-              {isAuthenticated ? (
-                    <Link to='/Dashboard' style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}>
-                        Get Started
-                    </Link>
-                ) : (
-                    <Link style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}
-                        onClick={() => loginWithRedirect()}>
-                        Get Started
-                    </Link>
-                )}
+                <Link to='/Dashboard'>Get Started</Link>
               </div>
             </div>
           </div>

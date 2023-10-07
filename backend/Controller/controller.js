@@ -2,12 +2,11 @@ const dotenv = require("dotenv").config();
 const signup=require("../models/db_auth.js");
 const storage=require("../models/db_storage.js");
 const bcrypt = require('bcryptjs');
-const jwtSecret = process.env.JWT_SECRET;
 const jwt = require('jsonwebtoken');
-const multer = require('multer');
+const jwtSecret = process.env.JWT_SECRET;
+const fs = require('fs');
 
-// Define Multer storage configuration
-
+// Auth Controllers
 
 exports.signup=async(req,res)=>{
  	try{
@@ -67,7 +66,7 @@ exports.resetpassword=async(req,res)=>{
 	}
 }
 
-
+// Records Controllers
 exports.save_report_details =  async (req, res) => {
 	try {
 	  if (!req.file) {
@@ -86,7 +85,7 @@ exports.save_report_details =  async (req, res) => {
 	}
   }
 
-const fs = require('fs').promises;
+
 exports.fetch_report_details = async (req, res) => {
 	const {ReportName}=req.body;
   try {
@@ -102,6 +101,7 @@ exports.fetch_report_details = async (req, res) => {
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+
 exports.fetch_one_report_details = async (req, res) => {
 	const {ReportName}=req.query;
   try {
@@ -120,6 +120,7 @@ exports.fetch_one_report_details = async (req, res) => {
     return res.status(500).json( error.message );
   }
 };
+
 exports.delete_details = async (req, res) => {
 	const {ReportName}=req.query;
   try {

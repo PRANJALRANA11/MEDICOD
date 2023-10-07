@@ -4,15 +4,19 @@ const dotenv = require("dotenv").config();
 const bodyparser = require("body-parser");  
 const mongoose = require("mongoose");       
 const express = require("express");         
-const app = express();     
+const app = express();  
 
-const router_auth=require('./Routes/routes_auth');   
 
+// Using Routers
+const router=require('./Routes/routes'); 
+
+// Using middlewares
 const cors = require("cors");
 app.use(cors());
 app.use(express.json());
-app.use(router_auth);
+app.use(router);
 
+// Connecting to Database
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(
@@ -21,6 +25,7 @@ async function main() {
   console.log("database is connected");
 }
 
+// Listening to the server
 const port=80||8000
 app.listen(port, () => {
   console.log(`server running at port ${port}`);

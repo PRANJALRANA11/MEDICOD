@@ -1,9 +1,8 @@
 import React from 'react'
 import '../../Styles/Home-styles/Header.css'; 
 import { Link } from 'react-router-dom';
-import { useAuth0 } from "@auth0/auth0-react";
+
 export default function Header() {
-    const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
      <header className='home_compo_header'>
@@ -59,22 +58,12 @@ export default function Header() {
                     marginTop:"30px",
                     marginLeft: "17px",
                         }}>
-                {isAuthenticated ? (
                     <Link to='/Dashboard' style={{
                         textDecoration:"none",
                         color:"#000",
                                         }}>
                         Get Started
                     </Link>
-                ) : (
-                    <Link style={{
-                        textDecoration:"none",
-                        color:"#000",
-                                        }}
-                        onClick={() => loginWithRedirect()}>
-                        Get Started
-                    </Link>
-                )}
                 </div>
                 <div style={{
                     display:"flex",
