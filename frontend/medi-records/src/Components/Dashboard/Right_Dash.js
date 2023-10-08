@@ -6,8 +6,6 @@ import Main from './Main';
 
 export default function Right_Dash() {
 
-   
-
     const [state_files, set_state_files] = useState("");
     const [report_details, set_report_details] = useState("");
     const [screen, set_screen] = useState(<Main/>);

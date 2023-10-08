@@ -1,3 +1,5 @@
+
+// This is the file for Home page. It contains the routes for the home page and the components to be rendered on the home page.
 import React,{useState} from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Navbar from '../Components/Home_components/Navbar'

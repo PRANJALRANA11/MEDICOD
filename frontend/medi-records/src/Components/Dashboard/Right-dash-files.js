@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../Styles/Dash-styles/Right_files.css';
 import { fetch_data_api, fetch_one_data_api, delete_api } from '../../api/api.js';
-import { pdf_img_url } from './Constants';
+import { pdf_img_url } from '../../Constants/Constants.js';
 
 export default function Right_dash_files(props) {
   const [pdfSrc, setPdfSrc] = useState(null);

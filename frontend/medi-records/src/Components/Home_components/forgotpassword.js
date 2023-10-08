@@ -21,8 +21,6 @@ export default function Forgotpassword() {
     e.preventDefault();
     try {
       const response = await  Email_Verification_api(formData);
- 
-
       setSuccessMessage('Your email has been received. Check your inbox for further instructions.');
       // console.log(response.data);
     } catch (error) {

@@ -9,6 +9,7 @@ const Navbar = () => {
     localStorage.removeItem('token');
     setIsAuthenticated(null);
   }
+  
   return (
     <nav className="navbar">
       <div className="container">

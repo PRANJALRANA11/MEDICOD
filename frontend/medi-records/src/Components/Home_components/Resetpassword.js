@@ -4,11 +4,11 @@ import '../../Styles/Home-styles/Authentication.css';
 import { Link } from 'react-router-dom';
 
 export default function Resetpassword() {
-
+  // state for form data
   const[formData,setformData]=useState({
     password: ''
   });
-
+  // state for success message
   const [successMessage, setSuccessMessage] = useState('');
 
   const handleFormData=(e)=>{
