@@ -36,6 +36,7 @@ export  async function signin_api(formData) {
   }
 }
 
+
 export  async function Email_Verification_api(formData) {
   try {
     const response = await axios.post('http://127.0.0.1:80/emailverify', formData);
@@ -71,10 +72,17 @@ export async function Reset_password_api(formData) {
 
 export async function store_data_api(Data) {
   try {
+    
     var response = await axios.post('http://127.0.0.1:80/store_report_data', Data);
-    console.log(response.data)
+    if(response.status===200){
+      console.log(response.data)
+      return response;
+    }else{
+      return response;
+    }
   } catch (error) {
     console.log(response.data);
+    return response;
   }
 
 }

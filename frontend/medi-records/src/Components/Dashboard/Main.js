@@ -8,6 +8,8 @@ export default function Main() {
       ClinicName:" ",
       uploaded_file:null,
   })
+
+  const [errors, setErrors] = React.useState({});
   const [save_btn_text,set_save_btn_text]=React.useState("Save")
 
   function HandleChange(e){
@@ -15,8 +17,32 @@ export default function Main() {
     set_report_details({...report_details,[name]:value})
   }
 
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = {};
+
+    if (report_details.ReportName.trim() === '') {
+      newErrors.ReportName = 'Report Name is required';
+      valid = false;
+    }
+
+    if (report_details.ClinicName.trim() === '') {
+      newErrors.ClinicName = 'Clinic Name is required';
+      valid = false;
+    }
+
+    if (report_details.uploaded_file == null) {
+      newErrors.uploaded_file = 'Please upload a file';
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
   const  HandleSubmit = async(e)=>{
       e.preventDefault();
+      if (validateForm()) {
       try {
         const formData = new FormData(); // Create a FormData object for file upload
         formData.append('ReportName', report_details.ReportName);
@@ -24,11 +50,15 @@ export default function Main() {
         formData.append('uploaded_file', report_details.uploaded_file);
         formData.append('uploaded_file_name', report_details.uploaded_file_name);
         const response = await store_data_api(formData);
+        if(response.status===200){
         set_save_btn_text("Saved Successfully")
+        }
         // console.log(response.data);
       } catch (error) {
+        setErrors({ ReportName: 'Please choose another report name' });
         // console.error('Error during registration:', error);
       }
+    }
   }
 
   return (
@@ -43,6 +73,11 @@ export default function Main() {
         className='Report_input' name='ReportName' 
         placeholder='Enter Your Type of Report eg X-Ray, CT-scan, MRI ...' 
         required={true} unique={true}></input>
+        {errors.ReportName && (
+            <div className="error" style={{ color: 'red', paddingBottom: '1rem' }}>
+              {errors.ReportName}
+            </div>
+          )}
       </div>
         <label style={{marginRight:"51rem"}}>Clinic Name</label>
       <div className='Clinic_Title'>
@@ -50,6 +85,11 @@ export default function Main() {
         onChange={HandleChange} name='ClinicName' 
         value={report_details.ClinicName} required={true} 
         placeholder='Enter the name of clinic or hospital'></input>
+        {errors.ClinicNameName && (
+            <div className="error" style={{ color: 'red', paddingBottom: '1rem' }}>
+              {errors.ClinicNameName}
+            </div>
+          )}
       </div>
         <label style={{marginRight:"43rem"}}>Upload Your Document</label>
       <div className='Appointment'>
@@ -70,6 +110,11 @@ export default function Main() {
               placeholder='Upload Your Report'
               type='file'
             />
+            {errors.uploaded_file && (
+            <div className="error" style={{ color: 'red', paddingBottom: '1rem' }}>
+              {errors.uploaded_file}
+            </div>
+          )}
             <button className='Save_doc_button' type='submit' >{save_btn_text}</button>
         </div>
       </div>

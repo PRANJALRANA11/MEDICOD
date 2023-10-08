@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 // Schema for storing the records
 const storageSchema = new mongoose.Schema({
     ReportName:{
-      type:String,required:true
+      type:String,required:true,unique:true
       },
     ClinicName:{
-      type:String,required:true,unique:true
+      type:String,required:true
+      },
+      uploaded_file_name:{
+        type:String,required:true
       },
       timestamp: {
         type: String,

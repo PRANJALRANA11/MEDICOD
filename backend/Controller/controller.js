@@ -4,7 +4,7 @@ const storage=require("../models/db_storage.js");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const jwtSecret = process.env.JWT_SECRET;
-const fs = require('fs');
+const fs = require('fs').promises;
 
 // Auth Controllers
 
@@ -18,7 +18,7 @@ exports.signup=async(req,res)=>{
   				const User_save = await newUser.save();
   				console.log(newUser);
 				const token = jwt.sign({id: newUser.id },jwtSecret,{ expiresIn: '48h' });
-				res.status(200).json("signed up successfully");
+				res.status(200).json(newUser.name);
 				}
 			else{
 				res.status(400).json("user already exist");
@@ -37,7 +37,7 @@ exports.signin=async(req,res)=>{
   				const isPasswordValid = await bcrypt.compare(password, userexist.password);
 				if (isPasswordValid) {
 					const token = jwt.sign({id: userexist.id },jwtSecret,{ expiresIn: '48h' });
-					res.status(200).json({ message: "Logged in" });
+					res.status(200).json(userexist.name);
 				} 
   		else {
     			res.status(401).json({ message: "Invalid credentials" });
