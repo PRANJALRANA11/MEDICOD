@@ -2,12 +2,14 @@
   "name": "medi-records",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
-  "transform": {
-    "^.+\\.jsx?$": "babel-jest"
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.js"
+    }
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
+    "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.0",
@@ -17,12 +19,13 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,9 +48,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
     "@testing-library/react": "^14.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^29.7.0",
+    "babel-plugin-styled-components": "^2.1.4",
     "react-test-renderer": "^18.2.0"
   }
 }
