@@ -32,18 +32,18 @@ export default function Contact() {
                 healthcare partner.
             </div>
             <div className='social-links'>
-                <i class="fa-brands fa-x-twitter fa-2xl" style={{
+                <i className="fa-brands fa-x-twitter fa-2xl" style={{
                     color:"white",
                     marginRight:"1rem",
                     cursor:"pointer"
                 }}></i>
-                <i class="fa-brands fa-instagram fa-2xl"
+                <i className="fa-brands fa-instagram fa-2xl"
                 style={{
                     color:"white",
                     marginRight:"1rem",
                     cursor:"pointer"
                 }}></i>
-                <i class="fa-brands fa-linkedin fa-2xl"
+                <i className="fa-brands fa-linkedin fa-2xl"
                 style={{
                     color:"white",
                     marginRight:"1rem",

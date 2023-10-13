@@ -27,7 +27,7 @@ const Navbar = () => {
             {isAuthenticated ?( <Link to="/Dashboard">Dashboard</Link>) :( <Link to="/signup">Dashboard</Link>)}
           </li>
           <li>
-            {isAuthenticated ?( <Link to="/" onClick={HandleLogout}>Logout</Link>) :( 
+            {isAuthenticated ?( <Link to="/"  onClick={HandleLogout}>Logout</Link>) :( 
             <Link to="/signup"style={{
             padding: "8px 16px",
             border: "1px solid #1d283a",

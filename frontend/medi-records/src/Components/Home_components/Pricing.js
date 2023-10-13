@@ -29,19 +29,19 @@ export default function Pricing() {
             </div>
             <div className='Pricing_div2_1_4'>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Secure online storage of medical records
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Access from any device
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Basic document management
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Email support
               </div>
               <div className='Section_div_1_1_4'>
@@ -63,23 +63,23 @@ export default function Pricing() {
             </div>                             
             <div className='Pricing_div2_1_4'>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Secure online storage of medical records
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Access from any device
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Advanced document management 
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check"  style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check"  style={{marginRight:"10px"}}></i>
                 Collaborative access for family members
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Priority email support
               </div>
               <div className='Section_div_1_1_4'>
@@ -101,27 +101,27 @@ export default function Pricing() {
             </div>
             <div className='Pricing_div2_1_4'>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Secure online storage of medical records
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Access from any device
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Advanced document management 
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Collaborative access for family members
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 Integration with healthcare providers for automatic updates
               </div>
               <div className='Pricing_div2_1_3'>
-                <i class="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
+                <i className="fa-solid fa-circle-check" style={{marginRight:"10px"}}></i>
                 24/7 customer support
               </div>
               <div className='Section_div_1_1_4'>

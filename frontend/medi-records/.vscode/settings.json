@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/daede30a-762f-4826-81c7-4869d2e64f69/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/MEDICOD",
+    "appService.deploySubpath": "."
+}

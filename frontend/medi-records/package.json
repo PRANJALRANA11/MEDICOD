@@ -2,11 +2,6 @@
   "name": "medi-records",
   "version": "0.1.0",
   "private": true,
-  "jest": {
-    "moduleNameMapper": {
-      "axios": "axios/dist/node/axios.js"
-    }
-  },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
     "@reduxjs/toolkit": "^1.9.7",
@@ -25,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll --coverage",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!medi-records)/\" --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -55,6 +50,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^29.7.0",
     "babel-plugin-styled-components": "^2.1.4",
-    "react-test-renderer": "^18.2.0"
+    "react-test-renderer": "^18.2.0",
+    "vitest": "^0.34.6"
   }
 }

@@ -81,7 +81,7 @@ export default function Header() {
                             padding:"6px",
                             borderRadius:"5px",
                                     }}>
-                            <i class="fa-regular fa-user fa-xl" ></i>
+                            <i className="fa-regular fa-user fa-xl" ></i>
                         </div>
                             <span style={{
                                 fontSize:"1.3rem",
@@ -103,7 +103,7 @@ export default function Header() {
                             padding:"6px",
                             borderRadius:"5px",
                                     }}>
-                            <i class="fa-regular fa-circle-check fa-xl"></i>
+                            <i className="fa-regular fa-circle-check fa-xl"></i>
                         </div>    
                             <span style={{
                                 fontSize:"1.3rem",
@@ -124,7 +124,7 @@ export default function Header() {
                             padding:"6px",
                             borderRadius:"5px",
                                     }}>
-                            <i class="fa-solid fa-shield fa-xl"></i>
+                            <i className="fa-solid fa-shield fa-xl"></i>
                         </div>    
                             <span style={{
                                 fontSize:"1.3rem",
