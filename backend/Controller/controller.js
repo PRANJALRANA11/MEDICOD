@@ -125,6 +125,9 @@ exports.delete_details = async (req, res) => {
 	const {ReportName}=req.query;
   try {
 		const details=await storage.findOne({ReportName});
+		if(details){
+			await fs.unlink(`uploads/${details.uploaded_file_name}`);
+		}
 		// console.log(details)
 		const delete_file=await storage.deleteOne({ReportName});
 		console.log(delete_file)
