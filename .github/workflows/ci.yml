@@ -34,7 +34,8 @@ jobs:
               cd frontend/medi-records
               npm install
     - name: run tests
-      run : cd frontend/medi-records |
+      run : | 
+            cd frontend/medi-records
             npm test
     - name : building site
       run  : | 
