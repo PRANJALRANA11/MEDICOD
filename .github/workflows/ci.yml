@@ -30,7 +30,7 @@ jobs:
               cd backend
               npm install
               cd ..
-              cd ../backend
+
               cd frontend/medi-records
               npm install
     - name: run tests
