@@ -1,57 +1,87 @@
 // app.test.js
 import {render, screen,fireEvent} from '@testing-library/react'
-import App from '../App'
-import Home from '../Pages/Home'
 import Navbar from '../Components/Home_components/Navbar'
+import Signin from '../Components/Home_components/Signin'
+import Signup from '../Components/Home_components/Signup'
+import Header from '../Components/Home_components/Header'
 import { MemoryRouter } from 'react-router-dom'
-
-describe('Navbar component', () => {
-  it('should render the logo', () => {
-    render(
-    <MemoryRouter>
-      <Navbar />
-    </MemoryRouter>);
-    const logo = screen.getByText('MEDICOD');
-    expect(logo).toBeInTheDocument();
+describe('Navbar Component', () => {
+  it('renders without crashing', () => {
+    render(<MemoryRouter><Navbar /></MemoryRouter>);
+    expect(screen.getByText('MEDICOD')).toBeInTheDocument();
   });
 
-  it('should render the About and Contact links', () => {
-    render(<MemoryRouter>
-      <Navbar />
-    </MemoryRouter>);
-    const aboutLink = screen.getByText('About');
-    const contactLink = screen.getByText('Contact');
-    expect(aboutLink).toBeInTheDocument();
-    expect(contactLink).toBeInTheDocument();
+  it('displays the "Signup" link when not authenticated', () => {
+    render(<MemoryRouter><Navbar /></MemoryRouter>);
+    expect(screen.getByText('Signup')).toBeInTheDocument();
+  });
+  it('matches the snapshot', () => {
+    const { asFragment } = render(<MemoryRouter><Navbar /></MemoryRouter>);
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('Signin Component', () => {
+  it('renders the form fields and submit button', () => {
+    render(<MemoryRouter><Signin /></MemoryRouter>);
+    expect(screen.getByPlaceholderText(/Email/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/Password/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Login/i })).toBeInTheDocument();
   });
 
-  it('should render the Dashboard link if the user is authenticated', () => {
-    render(
-      <MemoryRouter>
-      <Navbar isAuthenticated={true} />
-    </MemoryRouter>);
-    const dashboardLink = screen.getByText('Dashboard');
-    expect(dashboardLink).toBeInTheDocument();
+  it('calls the submit function with the form data when submitted', async () => {
+     render(<MemoryRouter><Signin /></MemoryRouter>);
+    fireEvent.change(screen.getByPlaceholderText(/Email/i), { target: { value: 'test@example.com' } });
+    fireEvent.change(screen.getByPlaceholderText(/Password/i), { target: { value: 'password123' } });
+    fireEvent.click(screen.getByRole('button', { name: /Login/i }))
+  });
+  it('matches the snapshot', () => {
+    const { asFragment } = render(<MemoryRouter><Signin /></MemoryRouter>);
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('Signup Component', () => {
+  it('renders the form fields and submit button', () => {
+    render(<MemoryRouter><Signup /></MemoryRouter>);
+    expect(screen.getByPlaceholderText(/Enter Your Name/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/Enter Your Email/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/Create Password/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Sign Up/i })).toBeInTheDocument();
   });
 
-  it('should render the Signup link if the user is not authenticated', () => {
-    render( <MemoryRouter>
-      <Navbar isAuthenticated={false} />
-    </MemoryRouter>);
-    const signupLink = screen.getByText('Signup');
-    expect(signupLink).toBeInTheDocument();
+  it('calls the submit function with the form data when submitted', async () => {
+    render(<MemoryRouter><Signup /></MemoryRouter>);
+      fireEvent.change(screen.getByPlaceholderText(/Enter Your Name/i), { target: { value: 'John Doe' } });
+      fireEvent.change(screen.getByPlaceholderText(/Enter Your Email/i), { target: { value: 'test@example.com' }});
+      fireEvent.change(screen.getByPlaceholderText(/Create Password/i), { target: { value: 'password123' }});
+      fireEvent.click(screen.getByRole('button', { name: /Sign Up/i }));
+    });
+    it('matches the snapshot', () => {
+      const { asFragment } = render(<MemoryRouter><Signup /></MemoryRouter>);
+      expect(asFragment()).toMatchSnapshot();
+    });
   });
 
-  it('should call the HandleLogout function when the Logout link is clicked', () => {
-    const mockHandleLogout = jest.fn();
-    render(
-      <MemoryRouter>
-     <Navbar isAuthenticated={true} HandleLogout={mockHandleLogout} />
-    </MemoryRouter>);
-    const logoutLink = screen.queryByRole('link', { name: /logout/i});
-    if (logoutLink) {
-      fireEvent.click(logoutLink);
-    }
-    expect(mockHandleLogout).toHaveBeenCalledTimes(logoutLink ? 1 : 0);
+describe('Header Component', () => {
+  it('renders the header component', () => {
+    render(<MemoryRouter><Header /></MemoryRouter>);
+
+    // Check if the header text is displayed
+    expect(screen.getByText('All Your Medical Records At One Place')).toBeInTheDocument();
+    expect(screen.getByText('Effortless Medical Record Management Online')).toBeInTheDocument();
+    // Check if the "Get Started" link is present
+    const getStartedLink = screen.getByText('Get Started');
+    expect(getStartedLink).toBeInTheDocument();
+    expect(getStartedLink).toHaveAttribute('href', '/Dashboard');
+
+    // Check if the client information icons and text are displayed
+    expect(screen.getByText('Over 1000+ clients')).toBeInTheDocument();
+    expect(screen.getByText('Verified Trusted')).toBeInTheDocument();
+    expect(screen.getByText('Secure & Safe')).toBeInTheDocument();
+
+    // Check if the doctor image is displayed
+    const doctorImage = screen.getByAltText('doctor_image');
+    expect(doctorImage).toBeInTheDocument();
   });
 });

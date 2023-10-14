@@ -4,7 +4,7 @@ import '../../Styles/Home-styles/Authentication.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-export default function Signup({ updateAuthentication }) {
+export default function Signup() {
   let navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -60,7 +60,6 @@ export default function Signup({ updateAuthentication }) {
         const response = await Signup_api(formData);
         if (response === 200) {
           navigate('/Dashboard');
-          updateAuthentication(true);
           console.log(response.data);
         } else {
           setErrors({ email: 'This user already exists. Please try with different email address.' });

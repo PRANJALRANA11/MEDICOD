@@ -34,7 +34,7 @@ export  async function signin_api(formData) {
     }
     
   } catch (error) {
-    console.error('Error during registration');
+    console.error(error.message);
   }
 }
 

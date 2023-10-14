@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component matches the snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="navbar-brand"
+      >
+        <a
+          href="/"
+        >
+          MEDICOD
+        </a>
+      </div>
+      <ul
+        class="navbar-links"
+      >
+        <li>
+          <a
+            href="#About"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="#Contact"
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            href="/signup"
+          >
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a
+            href="/signup"
+            style="padding: 8px 16px; border: 1px solid #1d283a; border-radius: 10px;"
+          >
+            Signup
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Signin Component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="Body_signup"
+  >
+    <div
+      class="signup"
+    >
+      <h1
+        class="signup_heading"
+      >
+        Welcome To Medicod
+      </h1>
+      <form
+        class="form"
+        method="POST"
+      >
+        <input
+          name="email"
+          placeholder="Email"
+          required=""
+          type="email"
+          value=""
+        />
+        <input
+          name="password"
+          placeholder="Password"
+          required=""
+          type="password"
+          value=""
+        />
+        <a
+          href="/forgotpassword"
+          id="Forget-pass"
+        >
+          Forgot Password ?
+        </a>
+        <button
+          id="Login_btn"
+          type="submit"
+        >
+          Login
+        </button>
+        <div>
+          <span>
+            Don't have an account? 
+            <a
+              href="/Signup"
+            >
+              Sign up now
+            </a>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Signup Component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="Body_signup"
+  >
+    <div
+      class="signup"
+    >
+      <h1
+        class="signup_heading"
+      >
+        Welcome To Medicod
+      </h1>
+      <form
+        class="form"
+        method="POST"
+      >
+        <input
+          name="name"
+          placeholder="Enter Your Name"
+          required=""
+          type="text"
+          value=""
+        />
+        <input
+          name="email"
+          placeholder="Enter Your Email"
+          required=""
+          type="email"
+          value=""
+        />
+        <input
+          name="password"
+          placeholder="Create Password"
+          required=""
+          type="password"
+          value=""
+        />
+        <button
+          id="Login_btn"
+          type="submit"
+        >
+          Sign Up
+        </button>
+        <div>
+          <span>
+            Already have an account? 
+            <a
+              href="/Signin"
+            >
+              Sign in now
+            </a>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
