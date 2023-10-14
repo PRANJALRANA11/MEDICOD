@@ -30,7 +30,6 @@ jobs:
               cd backend
               npm install
               cd ..
-
               cd frontend/medi-records
               npm install
     - name: run tests
@@ -42,7 +41,6 @@ jobs:
               cd backend
               npm start
               cd ..
-              cd ../backend
               cd frontend/medi-records
               npm run build
       
