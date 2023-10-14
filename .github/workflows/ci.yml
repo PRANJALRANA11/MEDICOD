@@ -39,5 +39,5 @@ jobs:
     - name : building site
       run  : | 
               cd frontend/medi-records
-              npm run build
+              npm start
       
