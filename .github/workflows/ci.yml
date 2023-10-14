@@ -38,9 +38,6 @@ jobs:
             npm test
     - name : building site
       run  : | 
-              cd backend
-              npm start
-              cd ..
               cd frontend/medi-records
               npm run build
       
