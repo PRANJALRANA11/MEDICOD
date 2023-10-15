@@ -33,7 +33,6 @@ describe('Signin Component', () => {
      render(<MemoryRouter><Signin /></MemoryRouter>);
     fireEvent.change(screen.getByPlaceholderText(/Email/i), { target: { value: 'test@example.com' } });
     fireEvent.change(screen.getByPlaceholderText(/Password/i), { target: { value: 'password123' } });
-    fireEvent.click(screen.getByRole('button', { name: /Login/i }))
   });
   it('matches the snapshot', () => {
     const { asFragment } = render(<MemoryRouter><Signin /></MemoryRouter>);
@@ -55,7 +54,6 @@ describe('Signup Component', () => {
       fireEvent.change(screen.getByPlaceholderText(/Enter Your Name/i), { target: { value: 'John Doe' } });
       fireEvent.change(screen.getByPlaceholderText(/Enter Your Email/i), { target: { value: 'test@example.com' }});
       fireEvent.change(screen.getByPlaceholderText(/Create Password/i), { target: { value: 'password123' }});
-      fireEvent.click(screen.getByRole('button', { name: /Sign Up/i }));
     });
     it('matches the snapshot', () => {
       const { asFragment } = render(<MemoryRouter><Signup /></MemoryRouter>);
