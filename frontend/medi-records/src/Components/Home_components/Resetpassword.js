@@ -22,7 +22,7 @@ export default function Resetpassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await Reset_password_api(formData);
+       await Reset_password_api(formData);
       setSuccessMessage('Your password has been reset');
       // console.log(response.data);
     } catch (error) {

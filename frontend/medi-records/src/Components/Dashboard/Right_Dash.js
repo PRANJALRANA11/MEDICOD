@@ -7,19 +7,11 @@ import Main from './Main';
 export default function Right_Dash() {
 
     const [state_files, set_state_files] = useState("");
-    const [report_details, set_report_details] = useState("");
     const [screen, set_screen] = useState(<Main/>);
 
     const Handle_saved_files = () => {
         set_state_files("Saved files");
         
-    }
-    const Handle_shared_files = () => {
-        set_state_files("Shared files");
-        
-    }
-    const Handle_deleted_files = () => {
-        set_state_files("Deleted files");
     }
     const Handle_screen=()=>{
         set_screen(<Right_dash_files state_files={state_files}/>)

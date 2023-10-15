@@ -44,7 +44,7 @@ export default function Main() {
       e.preventDefault();
       if (validateForm()) {
       try {
-        const formData = new FormData(); // Create a FormData object for file upload
+        const formData =new FormData(); // Create a FormData object for file upload
         formData.append('ReportName', report_details.ReportName);
         formData.append('ClinicName', report_details.ClinicName);
         formData.append('uploaded_file', report_details.uploaded_file);
@@ -72,7 +72,7 @@ export default function Main() {
         <input type='text' onChange={HandleChange} value={report_details.ReportName} 
         className='Report_input' name='ReportName' 
         placeholder='Enter Your Type of Report eg X-Ray, CT-scan, MRI ...' 
-        required={true} unique={true}></input>
+        required={true}></input>
         {errors.ReportName && (
             <div className="error" style={{ color: 'red', paddingBottom: '1rem' }}>
               {errors.ReportName}

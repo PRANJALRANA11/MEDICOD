@@ -23,7 +23,6 @@ export default function Header() {
                         width:"38rem",
                             }}>
                     <h1 style={{
-                        color:"white",
                         fontSize:"3rem",
                         fontFamily:"'Poppins",
                         color:"#e1e7ef",

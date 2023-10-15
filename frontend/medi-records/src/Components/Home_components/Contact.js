@@ -5,7 +5,7 @@ export default function Contact() {
     <div className='Contact_div' id='Contact'>
       <div className='Upper_Contact_Box'>
         <div className='heading'>
-            Let's Get In Touch
+             Lets Get In Touch
             <button style={{
                 marginLeft:"28rem",
                 width:"10rem",
