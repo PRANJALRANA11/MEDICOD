@@ -13,18 +13,18 @@ const Navbar_Dash = () => {
           <Link to="/">MEDICOD</Link>
         </div>
         <div className="navbar-search">
-          <i class="fa-solid fa-magnifying-glass" style={{fontSize:14,marginRight:10,color:"#757587"}}></i>
+          <i className="fa-solid fa-magnifying-glass" style={{fontSize:14,marginRight:10,color:"#757587"}}></i>
           <input type="text" placeholder="Search" />
         </div>
         <ul className="navbar-links_dash">
           <li>
-            <i class="fa-solid fa-question" style={{
+            <i className="fa-solid fa-question" style={{
               fontSize:"1.2rem",
               marginTop:5
             }}></i>
           </li>
           <li>
-            <i class="fa-regular fa-bell" style={{
+            <i className="fa-regular fa-bell" style={{
               fontSize:"1.2rem",
               marginTop:5
             }}></i>

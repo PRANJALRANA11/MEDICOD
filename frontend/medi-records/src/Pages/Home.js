@@ -1,4 +1,4 @@
-
+import React from 'react'
 // This is the file for Home page. It contains the routes for the home page and the components to be rendered on the home page.
 import Navbar from '../Components/Home_components/Navbar'
 import Header from '../Components/Home_components/Header'

@@ -100,7 +100,7 @@ export default function Signin() {
           </button>
           <div>
             <span>
-              Don't have an account? <Link to="/Signup">Sign up now</Link>
+              not signed up yet <Link to="/Signup">Sign up now</Link>
             </span>
           </div>
         </form>

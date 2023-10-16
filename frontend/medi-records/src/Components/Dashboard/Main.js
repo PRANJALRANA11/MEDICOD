@@ -72,7 +72,7 @@ export default function Main() {
         <input type='text' onChange={HandleChange} value={report_details.ReportName} 
         className='Report_input' name='ReportName' 
         placeholder='Enter Your Type of Report eg X-Ray, CT-scan, MRI ...' 
-        required={true} unique={true}></input>
+        required={true}></input>
         {errors.ReportName && (
             <div className="error" style={{ color: 'red', paddingBottom: '1rem' }}>
               {errors.ReportName}

@@ -47,7 +47,7 @@ export default function Right_dash_files(props) {
 
   return (
     <div>
-      <div className='file_status'>{props.state_files}</div>
+      <div className='file_status'>{props}</div>
       <div className='files'>
         {details.map((report, index) => (
           <div className='report' key={index}>
