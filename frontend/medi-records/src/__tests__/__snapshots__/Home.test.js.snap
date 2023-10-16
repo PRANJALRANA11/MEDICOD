@@ -100,7 +100,7 @@ exports[`Signin Component matches the snapshot 1`] = `
         </button>
         <div>
           <span>
-            Don't have an account? 
+            not signed up yet 
             <a
               href="/Signup"
             >
