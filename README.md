@@ -1,57 +1,90 @@
-#[ Medicod ](https://medicod-mztg.onrender.com/)
+<h1 align="center" id="title">MEDICOD</h1>
 
-Welcome to Medicod, the app that empowers you to store and manage all your medical records. This documentation will guide you through the features and usage of the Medicod app.
+<p align="center"><img src="https://socialify.git.ci/PRANJALRANA11/MEDICOD/image?description=1&amp;font=Inter&amp;forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;pulls=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
-## Table of Contents
-1. Getting Started
-    - Sign Up and Login
-2. Storing Your Medical Records
-    - Adding a New Medical Record
-    - Viewing Your Medical Records
-3. Support and Contact Information
+<p id="description">Welcome to Medicod the app that empowers you to store and manage all your medical records. This documentation will guide you through the features and usage of the Medicod app.</p>
 
-## 1. Getting Started
-![Medicod](screenshots/picture1.png)
--![Medicod](screenshots/picture2.png)
-### Sign Up and Login
+<h2>🚀 Demo</h2>
 
-- To get started with Medicod, visit our website [Medicod](https://medicod-mztg.onrender.com/) and create an account.
-- Once you've registered, log in to your account using your credentials.
+[https://medicod-mztg.onrender.com/](https://medicod-mztg.onrender.com/)
 
--![Medicod](screenshots/picture3.png)
+<h2>Project Screenshots:</h2>
 
-## 2. Storing Your Medical Records
+<img src="screenshots/picture1.png" alt="project-screenshot" width="300" height="100/">
 
-### Adding a New Medical Record
+<img src="screenshots/picture2.png" alt="project-screenshot" width="300" height="100/">
 
-- After logging in, navigate to the "Dashboard" section.
-- Fill in the details of your medical record in Markdown format. You can include information such as:
-  - Medical condition or diagnosis
-  - Attachments (e.g., X-rays, lab reports)
-- Save the record when you've added all the necessary information.
-- ![Medicod](screenshots/picture4.png)
+<img src="screenshots/picture3.png" alt="project-screenshot" width="300" height="100/">
 
+<img src="screenshots/picture4.png" alt="project-screenshot" width="300" height="100/">
 
-### Viewing Your Medical Records
+<img src="screenshots/picture1.png" alt="project-screenshot" width="300" height="100/">
 
-- In the "Saved Records" section, you can see a list of all the medical records you've added.
-- Click on a record to view the details . You can also download or print the record for your reference.
-- -![Medicod](screenshots/picture5.png)
   
+  
+<h2>🧐 Features</h2>
 
-### Deleting Medical Records
+Here're some of the project's best features:
 
-- If you wish to delete a medical record:
-  - Access the "Saved Records" section.
-  - Click on the record you want to delete.
-  - Look for the delete option and confirm the action.
+*   Store Records
+*   Fully Secured Authentication
+*   Access from anywhere
 
-## 6. Support and Contact Information
+<h2>🛠️ Installation Steps:</h2>
 
-- For any technical support, inquiries, or feedback, please reach out to our support team at [support@medicod.com].
-- We value your feedback and are here to assist you in managing your medical records effectively.
+<p>1. Prerequisites</p>
 
-Thank you for choosing Medicod to store and manage your medical records. We are dedicated to providing a secure and user-friendly platform to help you take control of your healthcare information.
+```
+Before you begin ensure you have the following prerequisites installed on your system: Node.js and npm  Git  A modern web browser  A text editor or integrated development environment (IDE)
+```
 
-Stay healthy and organized with Medicod!
+<p>2. Cloning the Repository</p>
 
+```
+Clone the Medicod repository to your local machine using the following command: git clone https://github.com/medicod/medicod-app.git
+```
+
+<p>3. Navigate to the project folder and start installing dependencies for frontend</p>
+
+```
+cd medicod/frontend/medi-records   npm install
+```
+
+<p>4. Navigate to the project folder and start installing dependencies for backendend</p>
+
+```
+cd medicod/backend   npm install
+```
+
+<p>5. start the backend and frontend server</p>
+
+```
+npm start
+```
+
+<p>6. make changes commit and push</p>
+
+```
+git add git commit git push
+```
+
+<h2>🍰 Contribution Guidelines:</h2>
+
+Now that you have the Medicod app running locally you can make contributions by: Fixing bugs Adding new features Improving existing features Enhancing the user interface Updating documentation and you can check our contribution guidelines also for more details
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   nodejs
+*   expressjs
+*   reactjs
+*   html
+*   css
+*   mongodb
+
+<h2>🛡️ License:</h2>
+
+This project is licensed under the MIT
