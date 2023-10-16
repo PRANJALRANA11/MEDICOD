@@ -9,18 +9,17 @@
 [https://medicod-mztg.onrender.com/](https://medicod-mztg.onrender.com/)
 
 <h2>Project Screenshots:</h2>
-![picture1](https://github.com/PRANJALRANA11/MEDICOD/assets/129268721/97ca7f18-01e4-4383-867a-7a5460da3a51)
 
 
-<img src="screenshots/picture1.png" alt="project-screenshot" width="300" height="100/">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture1.png" alt="project-screenshot" width="700" height="auto">
 
-<img src="screenshots/picture2.png" alt="project-screenshot" width="300" height="100/">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture2.png" alt="project-screenshot" width="700" height="auto">
 
-<img src="screenshots/picture3.png" alt="project-screenshot" width="300" height="100/">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture3.png" alt="project-screenshot" width="700" height="auto">
 
-<img src="screenshots/picture4.png" alt="project-screenshot" width="300" height="100/">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture4.png" alt="project-screenshot" width="700" height="auto">
 
-<img src="screenshots/picture1.png" alt="project-screenshot" width="300" height="100/">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture5.png" alt="project-screenshot" width="700" height="auto">
 
   
   
