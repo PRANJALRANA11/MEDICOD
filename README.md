@@ -11,15 +11,15 @@
 <h2>Project Screenshots:</h2>
 
 
-<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture1.png" alt="project-screenshot" width="700" height="auto">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/assets/129268721/823d20ee-7914-4892-8ec1-cad89295fd5b" alt="project-screenshot" width="700" height="auto">
 
-<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture2.png" alt="project-screenshot" width="700" height="auto">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/assets/129268721/a317be9b-3340-4bdd-a761-a70f35832e7c" alt="project-screenshot" width="700" height="auto">
 
-<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture3.png" alt="project-screenshot" width="700" height="auto">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/assets/129268721/5b169e4c-fcd0-4173-beba-014a2bb965f3" alt="project-screenshot" width="700" height="auto">
 
-<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture4.png" alt="project-screenshot" width="700" height="auto">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/assets/129268721/210ffe3b-e310-4acd-b70f-c02dfdac3339" alt="project-screenshot" width="700" height="auto">
 
-<img src="https://github.com/PRANJALRANA11/MEDICOD/blob/master/screenshots/picture5.png" alt="project-screenshot" width="700" height="auto">
+<img src="https://github.com/PRANJALRANA11/MEDICOD/assets/129268721/eedcc320-afbb-4352-a285-f5900db23ad0" alt="project-screenshot" width="700" height="auto">
 
   
   
